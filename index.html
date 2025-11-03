@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título Otimizado  -->
+    <!-- SEO: Título Otimizado -->
     <title>FlávioDev | Web Design Estratégico, Otimização de Sites e Conversão Máxima</title>
     
-    <!-- INÍCIO: Meta Tags de SEO e Social (Open Graph) -->
+    <!-- SEO: Meta Tags de SEO e Social (Open Graph) -->
     <meta name="description" content="Especialista em Web Design Estratégico e Performance Digital. Criamos sites, e-commerces e Landing Pages otimizadas para rastreamento, Google Ads, Meta Ads e alta conversão.">
     <meta name="keywords" content="web design estratégico, otimização de sites, landing pages, e-commerce, tráfego pago, google tag manager, SEO, flaviodev">
-    
-    <!-- Open Graph Tags (para redes sociais) -->
     <meta property="og:title" content="FlávioDev | Web Design Estratégico e Performance Digital">
-    <meta property="og:description" content="Sites que vendem de verdade. Sua autoridade online com rastreamento preciso para campanhas de Google Ads e Facebook Ads.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://flaviodev.reviewnexus.blog/"> 
-    <!-- FIM: Meta Tags de SEO e Social -->
 
     <!-- Carregamento do Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -42,10 +38,14 @@
 
     <style>
         /* Estilos base */
+        html {
+            scroll-behavior: smooth; /* Para rolagem suave dos links */
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #0A192F; 
-            color: #CCD6F6; /* Cor do texto padrão */
+            color: #CCD6F6;
+            overflow-x: hidden;
         }
         /* Gradiente para Títulos de Alto Impacto */
         .text-gradient {
@@ -61,7 +61,7 @@
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(255, 69, 0, 0.8);
-            background-color: #FF5A1A; /* Ligeiramente mais claro no hover */
+            background-color: #FF5A1A;
         }
         .card-shadow {
             transition: all 0.4s ease;
@@ -73,32 +73,33 @@
             border-color: #FF4500;
         }
 
-        /* Botão flutuante do WhatsApp */
+        /* Botão flutuante do WhatsApp - NOVO ESTILO */
         .whatsapp-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 24px;
+            right: 24px; 
             background-color: #25D366; /* Cor do WhatsApp */
-            color: white;
             border-radius: 50%;
             width: 60px;
             height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             z-index: 1000;
             transition: all 0.3s ease;
         }
         .whatsapp-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
         }
         .whatsapp-button svg {
             fill: white;
+            width: 32px;
+            height: 32px;
         }
-        /* Estilos para a nova seção de perfil */
+
+        /* Estilos para a seção de perfil */
         .profile-section h3 {
             position: relative;
             padding-bottom: 0.5rem;
@@ -109,9 +110,9 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 80px; /* Largura da linha */
+            width: 80px; 
             height: 3px;
-            background-color: #FF4500; /* Cor laranja vibrante */
+            background-color: #FF4500;
         }
     </style>
 </head>
@@ -125,12 +126,12 @@
             <h1 class="text-3xl font-extrabold text-vibrant-orange cursor-pointer">
                 <span class="text-light-bg">FLÁVIO</span><span class="text-vibrant-orange">DEV</span>
             </h1>
-            <!-- Navegação -->
+            <!-- Navegação: Link "Metodologia" trocado por "Contacto" para #cta -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#solucoes" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Web & E-commerce</a>
                 <a href="#marketing" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Performance Digital</a>
                 <a href="#profile" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Minha Expertise</a>
-                <a href="#processo" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Metodologia</a>
+                <a href="#cta" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Contato</a>
             </nav>
             <a href="#cta" class="hidden md:block px-5 py-2 text-sm font-semibold rounded-lg bg-vibrant-orange text-deep-blue transition duration-300 hover:bg-orange-600">
                 Orçamento Rápido
@@ -138,9 +139,25 @@
         </div>
     </header>
 
-    <!-- Seção Hero (Alto Impacto) -->
-    <section class="min-h-[90vh] flex items-center pt-20 pb-16 px-4 border-b-2 border-vibrant-orange/10">
-        <div class="max-w-6xl mx-auto text-center">
+    <!-- Seção Hero (Com Vídeo de Fundo) -->
+    <section class="min-h-[90vh] flex items-center pt-20 pb-16 px-4 relative overflow-hidden border-b-2 border-vibrant-orange/10">
+        
+        <!-- INÍCIO: Estrutura do Vídeo de Fundo -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <!-- 
+                ATENÇÃO: Substitua 'URL_DO_SEU_VIDEO_MP4_AQUI' pela URL real do seu arquivo de vídeo.
+                Este URL é apenas um placeholder.
+            -->
+            <source src="https://flaviodev.reviewnexus.blog/bg.mp4" type="video/mp4">
+           
+        </video>
+        <!-- Overlay Escuro para Legibilidade do Texto (Z-index 10) -->
+        <div class="absolute inset-0 bg-deep-blue/80 z-10"></div>
+        <!-- FIM: Estrutura do Vídeo de Fundo -->
+
+
+        <!-- Conteúdo do Hero (Z-index 20) -->
+        <div class="max-w-6xl mx-auto text-center relative z-20">
             <h2 class="text-2xl sm:text-3xl font-bold text-vibrant-orange mb-4 tracking-wider">
                 WEB DESIGNER ESTRATÉGICO
             </h2>
@@ -353,11 +370,11 @@
     </section>
 
 
-    <!-- Seção CTA Final (Azul Escuro com Botão Laranja) -->
+    <!-- Seção CTA Final/Contacto (Azul Escuro com Botão Laranja) -->
     <section id="cta" class="py-20 sm:py-28 px-4 bg-deep-blue border-t-2 border-vibrant-orange/30">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 text-light-bg">
-                Pare de Perder Vendas. Comece a Rastrear!
+                Fale Conosco: <span class="text-vibrant-orange">Vamos Alavancar seu Digital.</span>
             </h2>
             <p class="text-xl text-gray-text max-w-2xl mx-auto mb-10 font-medium">
                 Seu próximo projeto deve ser seu maior ativo de vendas. Solicite um orçamento e receba uma análise detalhada sobre como otimizar sua presença digital.
@@ -378,8 +395,8 @@
 
     <!-- Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-button">
-        <!-- Ícone SVG do WhatsApp -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28">
+        <!-- Ícone SVG do WhatsApp padronizado -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path d="M380.9 97.1C339.1 55.3 283.5 32 223.8 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 222-99.6 222-222 0-60.7-23.3-116.9-61.4-158.8zM223.8 458.8h.1c33.6 0 65.8-9.4 93.6-25.9l32.8-19.4 22.7 59.9-60.9-16.9-47.4-12.4c-29.1 15.9-62.2 24.1-96.8 24.1-105.2 0-190.1-85.5-190.1-190.1 0-51.5 20.1-99.5 56.4-135.8 36.3-36.3 84.3-56.4 135.8-56.4 104.2 0 188.7 84.8 188.7 188.7 0 52-20.1 100.1-56.4 136.4-36.2 36.2-84.1 56.2-135.5 56.2zm-12.8-21.2c-1.1-1.3-3.2-1.9-5.2-1.9-2 0-3.9.5-5.5 1.5-1.5 1-2.9 2.5-4.3 4.2-1.4 1.6-2.6 3.4-3.6 5.2-1 1.9-1.5 3.7-1.5 5.7 0 1.1.2 2.3.6 3.4.4 1.1 1 2 1.8 2.9.8.9 1.7 1.6 2.8 2.2 1.1.6 2.3.9 3.5.9 1.1 0 2.2-.1 3.2-.3 1-.2 1.9-.5 2.8-.9.9-.4 1.7-.8 2.4-1.3.8-.5 1.5-1.1 2.1-1.8 2.6-2.8 5-5.9 7.1-9.3 2.1-3.4 3.9-6.9 5.3-10.7 1.4-3.7 2.2-7.5 2.5-11.4.3-3.9.1-7.7-.6-11.4z"/>
         </svg>
     </a>
