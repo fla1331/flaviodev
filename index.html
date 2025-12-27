@@ -137,6 +137,26 @@
         .text-4xl {line-height: 1.4em !important;}
         .max-w-2xl { max-width: 75rem !important;}
     </style>
+
+
+<style>
+  body > * {
+    display: none !important;
+  }
+
+  body::before {
+    content: "Página em construção";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    background: #0f0f0f;
+    color: #fff;
+  }
+</style>
+
 </head>
 
 <body class="bg-preto text-branco">
@@ -155,6 +175,7 @@
                 <a href="#tecnologia" class="hover:text-laranja transition">Tecnologia</a>
                 <a href="#expertise" class="hover:text-laranja transition">Minha Expertise</a>
                 <a href="#portfolio" class="hover:text-laranja transition">Portfólio</a>
+                <a href="#contato" class="hover:text-laranja transition">Contato</a>
             </nav>
             
             <!-- CTA Desktop -->
@@ -497,8 +518,6 @@
     </section>
 
       
-
-    
 
     <!-- CTA FINAL -->
     <section id="contato" class="py-20 px-4">
