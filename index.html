@@ -269,6 +269,67 @@
             background: rgba(255, 69, 0, 1);
         }
 
+        .photo-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      flex-shrink: 0;
+      margin:0 auto;
+    }
+
+    .photo-circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 5px solid var(--primary);
+      overflow: hidden;
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 5px rgba(255, 107, 53, 0.2), 0 10px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo-circle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 5px rgba(255, 107, 53, 0.3), 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-placeholder {
+      color: var(--text-light);
+      text-align: center;
+      font-size: 14px;
+      padding: 20px;
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+
         /* Animações de entrada */
         .animate-on-scroll {
             opacity: 0;
@@ -714,7 +775,6 @@ body > * {
             
             <!-- Navegação Desktop -->
             <nav class="hidden md:flex space-x-8">
-                <a href="#solucoes" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Arquitetura</a>
                 <a href="#sites" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Sites</a>
                 <a href="#planos-landing" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">Landing Pages</a>
                 <a href="#marketing" class="text-gray-text hover:text-vibrant-orange transition duration-300 font-medium">SEO & Rastreamento</a>
@@ -738,7 +798,6 @@ body > * {
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <div class="flex flex-col gap-4">
-                <a href="#solucoes" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">Arquitetura Web</a>
                 <a href="#sites" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">Sites</a>
                 <a href="#planos-landing" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">Landing Pages</a>
                 <a href="#marketing" class="py-2 hover:text-vibrant-orange transition border-b border-gray-text/20">SEO & Rastreamento</a>
@@ -1190,9 +1249,13 @@ body > * {
                 <h2 class="text-4xl sm:text-5xl font-extrabold text-light-bg mb-4 animate-on-scroll">
                     Minha <span class="text-gradient">Expertise e Compromisso</span>
                 </h2>
-                <p class="text-xl text-gray-text max-w-3xl mx-auto animate-on-scroll" style="animation-delay: 0.1s">
-                    Conheça as habilidades e a experiência que me permitem atuar como um Arquiteto de Soluções, transformando sua visão digital em resultados tangíveis.
-                </p>
+                 <div class="photo-container">
+        <div class="photo-circle pulse">
+        
+          <img src="assets/img/flaviodev.jpg" alt="Flávio Lopes (Tom)">
+        
+        </div>
+      </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
