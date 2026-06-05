@@ -2,21 +2,38 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>FlávioDev | Web designer e Desenvolvedor, SEO, Wordpress, Landing Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
-    <meta name="description" content="Arquiteto de Soluções Web: Landing Pages estratégicas que vendem no WhatsApp, otimizadas para SEO, velocidade e rastreamento. Do projeto simples ao mais completo.">
-    <meta name="keywords" content="landing page, whatsapp, conversão, arquiteto de soluções web, seo técnico, performance web, otimização de sites, e-commerce, google tag manager, core web vitals, flaviodev">
-    <meta property="og:title" content="FlávioDev | Landing Pages Estratégicas + SEO Técnico">
+    <title>FlávioDev | Desenvolvedor Web</title>
+    
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Desenvolvedor Web especializado em criação de sites, landing pages e e-commerces com performance, SEO e rastreamento completo.">
+    <meta name="keywords" content="desenvolvedor web, wordpress, landing page, e-commerce, seo, performance web, flaviodev">
+    <meta name="author" content="Flávio Lopes">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="FlávioDev | Desenvolvedor Web">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://flaviodev.reviewnexus.blog/"> 
+    <meta property="og:url" content="https://flaviodev.reviewnexus.blog/">
     <meta property="og:image" content="https://flaviodev.reviewnexus.blog/logo-flavio.png">
+    <meta property="og:description" content="Transforme visitantes em clientes com sites de alta performance e SEO.">
+    <meta property="og:locale" content="pt_BR">
     
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FlávioDev | Desenvolvedor Web">
+    <meta name="twitter:description" content="Sites que carregam rápido e convertem visitantes em clientes.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://flaviodev.reviewnexus.blog/">
+    
+    <!-- Google Fonts + Tailwind + Font Awesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Tailwind Config -->
     <script>
       tailwind.config = {
         theme: {
@@ -37,8 +54,8 @@
             animation: {
               'fade-up': 'fadeUp 0.8s cubic-bezier(0.2, 0.9, 0.4, 1) forwards',
               'fade-in': 'fadeIn 0.6s ease forwards',
-              'slide': 'slide 12s ease-in-out infinite',
               'float': 'float 6s ease-in-out infinite',
+              'marquee': 'marquee 20s linear infinite',
             },
             keyframes: {
               fadeUp: {
@@ -49,13 +66,13 @@
                 '0%': { opacity: '0' },
                 '100%': { opacity: '1' },
               },
-              slide: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-8px)' },
-              },
               float: {
                 '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
                 '50%': { transform: 'translateY(-15px) rotate(2deg)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' },
               }
             }
           }
@@ -146,6 +163,31 @@
             transform: translateY(-100%);
         }
         
+        /* Logo com efeito CSS3 suave */
+        .logo-text {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F7 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 20px rgba(255,107,53,0.2);
+        }
+        
+        .logo-text:hover {
+            text-shadow: 0 0 25px rgba(255,107,53,0.4);
+            letter-spacing: -0.01em;
+        }
+        
+        .logo-accent {
+            font-weight: 800;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
         .whatsapp-btn {
             position: fixed;
             bottom: 28px;
@@ -167,10 +209,46 @@
             box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
         }
         
-        .whatsapp-btn svg {
-            width: 30px;
-            height: 30px;
-            fill: white;
+        .whatsapp-btn i {
+            font-size: 30px;
+            color: white;
+        }
+        
+        /* Botão Voltar ao Topo */
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            left: 28px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255,107,53,0.9);
+            backdrop-filter: blur(4px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            border: none;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #E55A2A;
+            transform: translateY(-3px);
+        }
+        
+        .back-to-top i {
+            font-size: 20px;
         }
         
         .hamburger {
@@ -233,65 +311,6 @@
             transform: translateY(0);
         }
         
-        .slide-container {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .slide-track {
-            display: flex;
-            transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.4, 1);
-        }
-        
-        .slide { flex-shrink: 0; width: 100%; }
-        
-        .slide-dots {
-            position: absolute;
-            bottom: 24px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            z-index: 20;
-        }
-        
-        .slide-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .slide-dot.active {
-            background: #FF6B35;
-            width: 24px;
-            border-radius: 4px;
-        }
-        
-        .slide-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(8px);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 20;
-        }
-        
-        .slide-nav:hover { background: rgba(255,107,53,0.6); }
-        .slide-nav.prev { left: 20px; }
-        .slide-nav.next { right: 20px; }
-        
         .profile-photo {
             width: 180px;
             height: 180px;
@@ -312,38 +331,205 @@
             display: inline-block;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(3deg); }
-        }
-        
-        .case-image {
+        /* Lightbox Modal melhorado */
+        .lightbox-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
         }
         
-        .case-card:hover .case-image {
-            transform: scale(1.05);
+        .lightbox-modal.active {
+            opacity: 1;
+            visibility: visible;
         }
         
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            text-align: center;
+        }
+        
+        .lightbox-content img {
+            width: 100%;
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 16px;
+            border: 2px solid rgba(255,107,53,0.4);
+        }
+        
+        .close-lightbox {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .close-lightbox:hover {
+            color: #FF6B35;
+            transform: scale(1.1);
+        }
+        
+        .lightbox-link {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A2A 100%);
+            border-radius: 40px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .lightbox-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,107,53,0.4);
+        }
+        
+        .portfolio-card {
+            cursor: pointer;
+        }
+        
+        .portfolio-link {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.875rem;
+            color: #FF6B35;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .portfolio-link:hover {
+            text-decoration: underline;
+            color: #FF8C5A;
+        }
+        
+        /* Cards com altura mínima consistente */
+        .card-solucao, .card-case {
+            min-height: 220px;
+        }
+        
+        /* Ícones com fundo destacado */
+        .icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(255,107,53,0.15) 0%, rgba(255,107,53,0.05) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover .icon-wrapper {
+            background: linear-gradient(135deg, rgba(255,107,53,0.25) 0%, rgba(255,107,53,0.1) 100%);
+            transform: scale(1.02);
+        }
+        
+        /* Hover mais suave */
+        .card-solucao, .card-case {
+            transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1);
+        }
+        
+        /* Marquee */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+        
+        .marquee-content span {
+            display: inline-block;
+            margin: 0 24px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #8E8E9E;
+        }
+        
+        .marquee-content i {
+            margin-right: 8px;
+            color: #FF6B35;
+        }
+        
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Responsividade Mobile aprimorada */
         @media (max-width: 768px) {
             .hamburger { display: block; }
-            .slide-nav { width: 32px; height: 32px; }
-            .slide-nav.prev { left: 12px; }
-            .slide-nav.next { right: 12px; }
             .whatsapp-btn { width: 48px; height: 48px; bottom: 20px; right: 20px; }
-            .whatsapp-btn svg { width: 24px; height: 24px; }
+            .whatsapp-btn i { font-size: 24px; }
+            .back-to-top { width: 40px; height: 40px; bottom: 20px; left: 20px; }
             .profile-photo { width: 140px; height: 140px; }
+            h1 { font-size: 2rem !important; }
+            section { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+            .text-4xl { font-size: 1.75rem !important; }
+            .text-5xl { font-size: 2rem !important; }
+            .gap-6 { gap: 1.25rem !important; }
         }
         
         @media (max-width: 640px) {
-            h1 { font-size: 2.25rem !important; }
-            .text-6xl { font-size: 2.5rem !important; }
+            .text-6xl { font-size: 2rem !important; }
+            .card-solucao, .card-case { min-height: auto; }
+            .icon-wrapper { width: 44px; height: 44px; }
+            .footer-grid { gap: 2rem; }
         }
+        
+        @media (min-width: 641px) and (max-width: 768px) {
+            section { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+        }
+        
+        /* Footer Mobile melhorado */
+        .footer-social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social-icon:hover {
+            color: #FF6B35;
+            transform: translateY(-2px);
+        }
+		
+		.portfolio-card img {
+    width: 100%;
+    height: 180px !important;    /* altura exata em pixels */
+    object-fit: cover;
+    object-position: center top;  /* posiciona a imagem: top, bottom, center, ou px ex: 0px 10px */
+}
+		
     </style>
     
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5CE8GNQK4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -351,489 +537,1020 @@
         gtag('js', new Date());
         gtag('config', 'G-B5CE8GNQK4');
     </script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Flávio Lopes",
+      "url": "https://flaviodev.reviewnexus.blog/",
+      "jobTitle": "Desenvolvedor Web",
+      "knowsAbout": ["WordPress", "SEO", "Performance Web", "Landing Pages", "Google Tag Manager", "Google Analytics"]
+    }
+    </script>
 </head>
 
 <body>
-    <header class="fixed top-0 w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i class="fas fa-code text-accent text-2xl"></i>
-                <span class="text-xl font-semibold tracking-tight text-white-soft">Flávio<span class="text-accent">Dev</span></span>
-            </div>
-            
-            <nav class="hidden md:flex gap-10">
-                <a href="#solucoes" class="text-gray-muted hover:text-accent transition text-sm font-medium">Soluções</a>
-                <a href="#planos" class="text-gray-muted hover:text-accent transition text-sm font-medium">Planos</a>
-                <a href="#cases" class="text-gray-muted hover:text-accent transition text-sm font-medium">Cases</a>
-                <a href="#sobre" class="text-gray-muted hover:text-accent transition text-sm font-medium">Sobre</a>
-                <a href="#depoimentos" class="text-gray-muted hover:text-accent transition text-sm font-medium">Depoimentos</a>
-            </nav>
-            
-            <a href="#cta" class="hidden md:block px-5 py-2 text-sm font-semibold rounded-lg bg-accent text-white transition hover:opacity-90">
-                Iniciar Projeto
-            </a>
-            
-            <div class="md:hidden hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="flex flex-col gap-4">
-                <a href="#solucoes" class="py-2 text-gray-muted hover:text-accent transition">Soluções</a>
-                <a href="#planos" class="py-2 text-gray-muted hover:text-accent transition">Planos</a>
-                <a href="#cases" class="py-2 text-gray-muted hover:text-accent transition">Cases</a>
-                <a href="#sobre" class="py-2 text-gray-muted hover:text-accent transition">Sobre</a>
-                <a href="#depoimentos" class="py-2 text-gray-muted hover:text-accent transition">Depoimentos</a>
-                <a href="#cta" class="mt-2 py-3 bg-accent text-white text-center rounded-lg font-semibold">Iniciar Projeto</a>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="pt-28 pb-20 px-6 relative overflow-hidden min-h-screen flex items-center">
-        <div class="absolute inset-0 bg-gradient-to-br from-dark via-charcoal to-slate"></div>
-        
-        <div class="max-w-6xl mx-auto relative z-10 w-full">
-            <div class="text-center mb-12 animate-on-scroll">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
-                    <i class="fas fa-rocket text-accent text-sm rocket-icon"></i>
-                    <span class="text-accent text-sm font-medium">Arquiteto de Soluções Web</span>
-                </div>
-                <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-                    Transforme visitantes em
-                    <span class="gradient-text">clientes</span>
-                </h1>
-                <p class="text-xl text-gray-muted max-w-3xl mx-auto leading-relaxed">
-                    Sites, landing pages e e-commerces com arquitetura técnica impecável. 
-                    Performance, SEO e rastreamento desde o primeiro byte de código.
-                </p>
-            </div>
-            
-            <div class="slide-container relative max-w-5xl mx-auto mt-12 rounded-2xl overflow-hidden">
-                <div class="slide-track" id="slideTrack">
-                    <div class="slide">
-                        <div class="bg-gradient-to-r from-accent/5 to-transparent p-8 md:p-12 rounded-2xl border border-accent/20">
-                            <div class="flex flex-col md:flex-row items-center gap-8">
-                                <div class="flex-1 text-center md:text-left">
-                                    <i class="fas fa-chart-line text-4xl text-accent mb-4 block"></i>
-                                    <h3 class="text-2xl font-bold mb-3">Performance que converte</h3>
-                                    <p class="text-gray-muted">Core Web Vitals otimizados para ranqueamento no Google e experiência impecável.</p>
-                                </div>
-                                <div class="flex-1 text-center md:text-left">
-                                    <i class="fas fa-tachometer-alt text-4xl text-accent mb-4 block"></i>
-                                    <h3 class="text-2xl font-bold mb-3">Velocidade máxima</h3>
-                                    <p class="text-gray-muted">Sites que carregam em menos de 2 segundos, reduzindo taxa de rejeição.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="bg-gradient-to-r from-accent/5 to-transparent p-8 md:p-12 rounded-2xl border border-accent/20">
-                            <div class="flex flex-col md:flex-row items-center gap-8">
-                                <div class="flex-1 text-center md:text-left">
-                                    <i class="fas fa-chart-simple text-4xl text-accent mb-4 block"></i>
-                                    <h3 class="text-2xl font-bold mb-3">Rastreamento completo</h3>
-                                    <p class="text-gray-muted">GA4, GTM, Meta Pixel configurados para decisões baseadas em dados.</p>
-                                </div>
-                                <div class="flex-1 text-center md:text-left">
-                                    <i class="fas fa-magnifying-glass-chart text-4xl text-accent mb-4 block"></i>
-                                    <h3 class="text-2xl font-bold mb-3">SEO Técnico</h3>
-                                    <p class="text-gray-muted">Estrutura otimizada para que seu negócio seja encontrado nas buscas.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="bg-gradient-to-r from-accent/5 to-transparent p-8 md:p-12 rounded-2xl border border-accent/20">
-                            <div class="flex flex-col md:flex-row items-center gap-8">
-                                <div class="flex-1 text-center md:text-left">
-                                    <i class="fab fa-whatsapp text-4xl text-accent mb-4 block"></i>
-                                    <h3 class="text-2xl font-bold mb-3">Conversão direta</h3>
-                                    <p class="text-gray-muted">Landing pages estratégicas que vendem direto no seu WhatsApp.</p>
-                                </div>
-                                <div class="flex-1 text-center md:text-left">
-                                    <i class="fas fa-chart-pie text-4xl text-accent mb-4 block"></i>
-                                    <h3 class="text-2xl font-bold mb-3">Resultados mensuráveis</h3>
-                                    <p class="text-gray-muted">Relatórios claros do que realmente importa para o seu negócio.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="slide-dots" id="slideDots"></div>
-                <div class="slide-nav prev" id="slidePrev">
-                    <i class="fas fa-chevron-left text-white text-sm"></i>
-                </div>
-                <div class="slide-nav next" id="slideNext">
-                    <i class="fas fa-chevron-right text-white text-sm"></i>
-                </div>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12 animate-on-scroll">
-                <a href="#planos" class="btn-primary px-8 py-3 rounded-xl font-semibold text-white text-center">Ver Planos</a>
-                <a href="#sobre" class="btn-outline px-8 py-3 rounded-xl font-medium text-white text-center">Conhecer Expertise</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Soluções -->
-    <section id="solucoes" class="py-24 px-6 bg-charcoal">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="text-accent text-sm font-medium uppercase tracking-wider">O que ofereço</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">Soluções <span class="gradient-text">estratégicas</span></h2>
-                <p class="text-gray-muted text-lg max-w-2xl mx-auto">Cada projeto é arquitetado sob medida para alcançar seus objetivos de negócio.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="card p-6 rounded-2xl animate-on-scroll">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
-                        <i class="fas fa-store text-accent text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">E-commerces</h3>
-                    <p class="text-gray-muted text-sm leading-relaxed">Lojas virtuais otimizadas para conversão, com checkout fluido e estrutura para escala.</p>
-                </div>
-                <div class="card p-6 rounded-2xl animate-on-scroll">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
-                        <i class="fas fa-building text-accent text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Sites Institucionais</h3>
-                    <p class="text-gray-muted text-sm leading-relaxed">Presença digital profissional com arquitetura que transmite autoridade e confiança.</p>
-                </div>
-                <div class="card p-6 rounded-2xl animate-on-scroll">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
-                        <i class="fas fa-file-alt text-accent text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Landing Pages</h3>
-                    <p class="text-gray-muted text-sm leading-relaxed">Páginas de alta conversão com copy persuasiva e foco em um único objetivo.</p>
-                </div>
-                <div class="card p-6 rounded-2xl animate-on-scroll">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
-                        <i class="fab fa-wordpress text-accent text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">WordPress</h3>
-                    <p class="text-gray-muted text-sm leading-relaxed">Otimização e desenvolvimento de sites WP com foco em performance e segurança.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Planos -->
-    <section id="planos" class="py-24 px-6 bg-dark">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="text-accent text-sm font-medium uppercase tracking-wider">Investimento</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">Escolha o plano <span class="gradient-text">ideal</span></h2>
-                <p class="text-gray-muted text-lg max-w-2xl mx-auto">Arquitetura técnica que se adapta ao momento do seu negócio.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card p-8 rounded-2xl animate-on-scroll">
-                    <h3 class="text-2xl font-bold mb-2">Essencial</h3>
-                    <p class="text-gray-muted text-sm mb-6">Para quem já tem o conteúdo definido</p>
-                    <div class="text-3xl font-bold mb-6">R$ 350<span class="text-gray-muted text-base font-normal"> - 500</span></div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">Implementação no WordPress/Elementor</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">100% responsivo</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">WhatsApp integrado</span></li>
-                    </ul>
-                    <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20o%20plano%20Essencial" target="_blank" class="btn-outline block w-full py-3 text-center rounded-xl font-medium">Solicitar</a>
-                </div>
-                
-                <div class="card-highlight p-8 rounded-2xl relative animate-on-scroll">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2"><span class="bg-accent text-white px-4 py-1 rounded-full text-xs font-bold">Mais escolhido</span></div>
-                    <h3 class="text-2xl font-bold mb-2">Estratégico</h3>
-                    <p class="text-gray-muted text-sm mb-6">Copy persuasiva e rastreamento</p>
-                    <div class="text-3xl font-bold mb-6">R$ 800<span class="text-gray-muted text-base font-normal"> - 1.200</span></div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">Tudo do Essencial +</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">Copy persuasiva</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">GA4 + Meta Pixel instalados</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">Otimização de velocidade</span></li>
-                    </ul>
-                    <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20o%20plano%20Estrat%C3%A9gico" target="_blank" class="btn-primary block w-full py-3 text-center rounded-xl font-semibold">Quero Vender Mais</a>
-                </div>
-                
-                <div class="card p-8 rounded-2xl animate-on-scroll">
-                    <h3 class="text-2xl font-bold mb-2">Performance</h3>
-                    <p class="text-gray-muted text-sm mb-6">Rastreamento avançado + consultoria</p>
-                    <div class="text-3xl font-bold mb-6">R$ 1.800<span class="text-gray-muted text-base font-normal">+</span></div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">Tudo do Estratégico +</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">Google Tag Manager</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">Eventos de conversão</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm">Consultoria + suporte 15 dias</span></li>
-                    </ul>
-                    <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20o%20plano%20Performance" target="_blank" class="btn-outline block w-full py-3 text-center rounded-xl font-medium">Conversar sobre Projeto</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Cases / Portfólio com Imagens -->
-    <section id="cases" class="py-24 px-6 bg-charcoal">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="text-accent text-sm font-medium uppercase tracking-wider">Cases de Sucesso</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">Projetos <span class="gradient-text">que Executo</span></h2>
-                <p class="text-gray-muted text-lg max-w-2xl mx-auto">Meu código não é só Arte, é ferramenta de vendas.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="card rounded-2xl overflow-hidden case-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Moderno" class="case-image">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">E-commerce Moderno</h3>
-                        <p class="text-gray-muted text-sm mb-4">Loja virtual completa com WooCommerce e checkout otimizado. Resultado: +35% em conversões.</p>
-                        <div class="flex gap-2 flex-wrap">
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">WooCommerce</span>
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">SEO</span>
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Performance</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-2xl overflow-hidden case-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Site Corporativo" class="case-image">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Site Corporativo + Analytics</h3>
-                        <p class="text-gray-muted text-sm mb-4">GA4, GTM e Meta Pixel configurados. Aumento de 200% na visibilidade orgânica.</p>
-                        <div class="flex gap-2 flex-wrap">
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">GTM</span>
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Analytics</span>
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">SEO</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-2xl overflow-hidden case-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Landing Page" class="case-image">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Landing Page de Conversão</h3>
-                        <p class="text-gray-muted text-sm mb-4">Copy persuasiva com foco em WhatsApp. Taxa de conversão de 8.3% nos primeiros 30 dias.</p>
-                        <div class="flex gap-2 flex-wrap">
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Copywriting</span>
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Conversão</span>
-                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Remarketing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-           
-        </div>
-    </section>
-    
-    <!-- Sobre / Expertise Completa -->
-    <section id="sobre" class="py-24 px-6 bg-dark">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col lg:flex-row gap-12 items-start">
-                <div class="flex-shrink-0 text-center lg:text-left animate-on-scroll">
-                    <img src="assets/img/flaviodev.jpg" alt="Flávio Lopes" class="profile-photo mx-auto lg:mx-0">
-                    <h2 class="text-2xl font-bold mt-6">Flávio Lopes</h2>
-                    <p class="text-accent text-sm">Web Designer & Desenvolvedor</p>
-                </div>
-                
-                <div class="flex-1">
-                    <span class="text-accent text-sm font-medium uppercase tracking-wider">Expertise Técnica</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6">Arquitetura Digital <span class="gradient-text">que Entrega Resultados</span></h2>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mb-8">
-                        <div class="expertise-card p-5 rounded-xl">
-                            <i class="fab fa-wordpress text-2xl text-accent mb-3 block"></i>
-                            <h3 class="text-lg font-bold mb-2">Criação e Otimização de Ativos Digitais (WordPress)</h3>
-                            <p class="text-gray-muted text-sm leading-relaxed">Proficiência total na criação de ativos digitais dinâmicos e responsivos, com foco em usabilidade (UX/UI), utilizando a plataforma WordPress como base para projetos robustos e escaláveis.</p>
-                        </div>
-                        
-                        <div class="expertise-card p-5 rounded-xl">
-                            <i class="fas fa-code text-2xl text-accent mb-3 block"></i>
-                            <h3 class="text-lg font-bold mb-2">Refinamento de Código (HTML/CSS) e Design System</h3>
-                            <p class="text-gray-muted text-sm leading-relaxed">Sólida habilidade em manipulação de codificação front-end para refinar o design e garantir a precisão do layout, além de manter um padrão de código limpo e otimizado para performance.</p>
-                        </div>
-                        
-                        <div class="expertise-card p-5 rounded-xl">
-                            <i class="fas fa-globe text-2xl text-accent mb-3 block"></i>
-                            <h3 class="text-lg font-bold mb-2">Configuração Estratégica de Hospedagens e Domínios</h3>
-                            <p class="text-gray-muted text-sm leading-relaxed">Experiência na configuração de hospedagens (HostGator, etc.) e domínios, garantindo que o ambiente seja o mais rápido e estável possível para suportar alto volume de acessos e melhorar o SEO Técnico.</p>
-                        </div>
-                        
-                        <div class="expertise-card p-5 rounded-xl">
-                            <i class="fas fa-chart-line text-2xl text-accent mb-3 block"></i>
-                            <h3 class="text-lg font-bold mb-2">Estratégias de SEO Técnico e Conteúdo</h3>
-                            <p class="text-gray-muted text-sm leading-relaxed">Implementação de táticas avançadas de Otimização para Mecanismos de Busca (SEO), com foco na parte técnica (velocidade, estrutura e rastreamento), que é a base para o sucesso do conteúdo.</p>
-                        </div>
-                        
-                        <div class="expertise-card p-5 rounded-xl">
-                            <i class="fas fa-chart-simple text-2xl text-accent mb-3 block"></i>
-                            <h3 class="text-lg font-bold mb-2">Gestão de Campanhas em Google Ads e Facebook Ads</h3>
-                            <p class="text-gray-muted text-sm leading-relaxed">Expertise na Gestão de Campanhas em Google Ads e Facebook Ads, focando em ROI e segmentação precisa para atingir metas de negócios.</p>
-                        </div>
-                        
-                        <div class="expertise-card p-5 rounded-xl">
-                            <i class="fas fa-microchip text-2xl text-accent mb-3 block"></i>
-                            <h3 class="text-lg font-bold mb-2">Ferramentas Essenciais e Automação (n8n, GTM, GitHub)</h3>
-                            <p class="text-gray-muted text-sm leading-relaxed">Contato com n8n, GitHub, VSCode, ChatGPT e ElevenLabs para otimizar fluxos de trabalho e criar conteúdo inovador, além de apoio em design com Photoshop, CorelDRAW e Canva.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        
-    </section>
-    
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="py-24 px-6 bg-charcoal">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="text-accent text-sm font-medium uppercase tracking-wider">Depoimentos</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">O que dizem <span class="gradient-text">meus clientes</span></h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="card p-6 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4"><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i></div>
-                    <p class="text-gray-muted text-sm leading-relaxed mb-4">"Em 2 semanas, meu WhatsApp recebeu 30% mais contatos qualificados. A velocidade do site fez toda diferença."</p>
-                    <h4 class="font-semibold">Carlos Mendes</h4>
-                    <p class="text-gray-muted text-xs">Indústria Pesada</p>
-                </div>
-                <div class="card p-6 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4"><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i></div>
-                    <p class="text-gray-muted text-sm leading-relaxed mb-4">"Agendamentos via WhatsApp aumentaram 60%. O Flávio entendeu perfeitamente a necessidade do meu negócio."</p>
-                    <h4 class="font-semibold">Dra. Ana Lúcia</h4>
-                    <p class="text-gray-muted text-xs">Clínica Odontológica</p>
-                </div>
-                <div class="card p-6 rounded-2xl animate-on-scroll">
-                    <div class="flex gap-1 mb-4"><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i></div>
-                    <p class="text-gray-muted text-sm leading-relaxed mb-4">"Site carrega 3x mais rápido. Taxa de abandono no checkout reduziu 35%. Investimento valeu cada centavo."</p>
-                    <h4 class="font-semibold">Ricardo Silva</h4>
-                    <p class="text-gray-muted text-xs">E-commerce Moda</p>
-                </div>
-            </div>
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <i class="fas fa-code text-accent text-2xl"></i>
+            <span class="text-xl font-semibold tracking-tight">
+                <span class="logo-text">Flávio</span><span class="logo-accent"> Lopes</span>
+            </span>
         </div>
-    </section>
+        
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex gap-8">
+            <a href="#sobre" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="sobre">Sobre</a>
+            <a href="#solucoes" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="solucoes">Soluções</a>
+            <a href="#cases" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="cases">Cases</a>
+            <a href="#portfolio" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="portfolio">Portfólio</a>
+            <a href="#planos" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="planos">Planos</a>
+            <a href="#depoimentos" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="depoimentos">Depoimentos</a>
+        </nav>
+        
+        <div class="hidden md:flex items-center gap-4">
+            <a href="#cta" class="px-5 py-2 text-sm font-semibold rounded-lg bg-accent text-white transition hover:opacity-90 hover:translate-y-[-1px]">Iniciar Projeto</a>
+        </div>
+        
+        <div class="md:hidden hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     
-    <!-- CTA Final -->
-    <section id="cta" class="py-24 px-6 bg-dark border-t border-accent/10">
-        <div class="max-w-4xl mx-auto text-center">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="flex flex-col gap-5">
+            <a href="#sobre" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="sobre">Sobre</a>
+            <a href="#solucoes" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="solucoes">Soluções</a>
+            <a href="#cases" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="cases">Cases</a>
+            <a href="#portfolio" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="portfolio">Portfólio</a>
+            <a href="#planos" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="planos">Planos</a>
+            <a href="#depoimentos" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="depoimentos">Depoimentos</a>
+            <div class="flex gap-6 justify-center py-2">
+                <button class="lang-btn text-sm font-medium text-accent" data-lang="pt">PT</button>
+                <button class="lang-btn text-sm font-medium text-gray-muted hover:text-accent" data-lang="en">EN</button>
+                <button class="lang-btn text-sm font-medium text-gray-muted hover:text-accent" data-lang="es">ES</button>
+            </div>
+            <a href="#cta" class="mt-2 py-3 bg-accent text-white text-center rounded-lg font-semibold">Iniciar Projeto</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="relative pt-28 pb-20 px-6 min-h-screen flex items-center overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-br from-dark/90 via-charcoal/80 to-slate/90 z-0"></div>
+    
+    <div class="max-w-6xl mx-auto relative z-10 w-full">
+        <div class="text-center mb-12 animate-on-scroll">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
                 <i class="fas fa-rocket text-accent text-sm rocket-icon"></i>
-                <span class="text-accent text-sm font-medium">Vamos começar?</span>
+                <span class="text-accent text-sm font-medium">Arquiteto de Soluções Web</span>
             </div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-5">Pronto para decolar?</h2>
-            <p class="text-gray-muted text-lg mb-10 max-w-2xl mx-auto">Sites e landing pages que entregam resultados reais. Fale comigo e vamos construir sua máquina de vendas.</p>
-            <a href="https://wa.me/5543996432679?text=Oi%2C%20vim%20do%20site%20e%20quero%20saber%20mais" target="_blank" class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white">
-                <i class="fab fa-whatsapp text-xl"></i>
-                Falar no WhatsApp
-            </a>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                Transforme visitantes em
+                <span class="gradient-text">clientes</span>
+            </h1>
+            <p class="text-xl text-gray-muted max-w-3xl mx-auto leading-relaxed">
+                Sites, landing pages e e-commerces com arquitetura técnica impecável. 
+                Performance, SEO e rastreamento desde o primeiro byte de código.
+            </p>
         </div>
-    </section>
-    
-    <footer class="py-8 px-6 border-t border-gray-light/20">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-gray-muted text-sm">&copy; 2025 FlávioDev. Web Designer & Desenvolvedor.</p>
-        </div>
-    </footer>
-    
-    <a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12.04 2C7.03 2 3 6.03 3 11.04C3 13.06 3.69 14.88 4.8 16.32L3.5 20.5L7.81 19.22C9.25 20.07 10.87 20.5 12.04 20.5C17.05 20.5 21.08 16.47 21.08 11.46C21.08 6.45 17.05 2 12.04 2ZM17.26 15.34C17.15 15.54 16.94 15.75 16.5 15.89C16.06 16.03 15.5 16.14 14.87 16.11C14.24 16.08 13.67 15.93 13.1 15.74C12.53 15.54 11.45 15.22 10.42 14.2C9.39 13.17 9.07 12.09 8.87 11.52C8.68 10.95 8.79 10.38 8.92 9.75C9.05 9.12 9.17 8.56 9.31 8.12C9.45 7.68 9.66 7.47 9.86 7.36C10.06 7.25 10.27 7.25 10.47 7.36C10.67 7.47 10.88 7.68 11.09 7.89L12.01 8.81C12.19 9 12.28 9.21 12.28 9.42C12.28 9.63 12.2 9.84 12.01 10.02L11.55 10.47C11.42 10.6 11.35 10.81 11.35 11.02C11.35 11.23 11.43 11.44 11.56 11.57C11.69 11.7 11.83 11.85 11.97 12C12.1 12.15 12.24 12.3 12.37 12.43C12.5 12.56 12.71 12.63 12.92 12.63C13.13 12.63 13.34 12.56 13.47 12.43L13.93 11.97C14.11 11.78 14.32 11.69 14.53 11.69C14.74 11.69 14.95 11.78 15.13 11.97L16.05 12.89C16.26 13.1 16.37 13.31 16.37 13.52C16.37 13.73 16.28 13.94 16.09 14.13L15.63 14.59C15.44 14.78 15.35 15 15.35 15.21C15.35 15.42 15.44 15.63 15.63 15.82L17.26 17.45C17.47 17.66 17.7 17.81 17.84 17.81C17.98 17.81 18.12 17.73 18.26 17.65C18.4 17.57 18.54 17.49 18.68 17.41C18.82 17.33 18.96 17.25 19.1 17.17C19.24 17.09 19.38 17.01 19.52 16.93C19.66 16.85 19.8 16.77 19.94 16.69L20.5 16.32L17.26 15.34Z"/>
-        </svg>
-    </a>
-    
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
         
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8 animate-on-scroll">
+            <a href="#planos" class="btn-primary px-8 py-3 rounded-xl font-semibold text-white text-center">Ver Planos</a>
+            <a href="#sobre" class="btn-outline px-8 py-3 rounded-xl font-medium text-white text-center">Conhecer História</a>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE (corrigido) -->
+<section id="sobre" class="py-24 px-6 bg-charcoal">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            <div class="flex-shrink-0 text-center lg:text-left animate-on-scroll">
+                <img src="assets/img/flaviodev.jpg" alt="Flávio Lopes" class="profile-photo mx-auto lg:mx-0">
+                <h2 class="text-2xl font-bold mt-6">Flávio Lopes</h2>
+                <p class="text-accent text-sm" data-i18n="sobreTitulo">Desenvolvedor Web</p>
+            </div>
+            
+            <div class="flex-1">
+                <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="sobreTag">Minha Trajetória</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6"><span data-i18n="sobreTitle1">De arte finalista a</span> <span class="gradient-text" data-i18n="sobreTitle2">desenvolvedor web</span></h2>
+                
+                <div class="prose prose-invert max-w-none space-y-5">
+                    <p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
+                        Comecei minha trajetória aos 16 anos em uma gráfica, trabalhando como arte-finalista por 8 anos.
+                        Foi ali que desenvolvi um <strong style="color:#ffffff;">olhar apurado para detalhes</strong>,
+                        composição visual e comunicação estratégica entendendo na prática como o design influencia
+                        percepção, valor e vendas.
+                    </p>
+
+                    <p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
+                        Hoje com 38 anos atuo como desenvolvedor especializado em tecnologias como WordPress, campanhas de tráfego no google e facebook, automação com N8n e sistema de vendas no marketing digital. Aplico essa bagagem de forma muito além do código e com visão.
+                        Não construo apenas sites bonitos.
+                        <strong style="color:#ffffff;">estruturo experiências visuais e funcionais</strong>
+                        que conduzem o visitante naturalmente até a ação.
+                    </p>
+
+                    <p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
+                        Seu site precisa transmitir confiança nos primeiros segundos,
+                        ser encontrado no Google, funcionar perfeitamente em qualquer dispositivo
+                        e transformar visitantes em clientes reais.
+                    </p>
+
+                    <p style="font-size: 20px; color: #ffffff; margin-top: 30px; font-weight: bold;">
+                        É isso que entrego através de design inteligente, performance e estratégia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto mt-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Arquitetura Digital <span class="gradient-text">que Entrega Resultados</span></h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fab fa-wordpress text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Criação e Otimização de Ativos Digitais (WordPress)</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Proficiência total na criação de ativos digitais dinâmicos e responsivos, com foco em usabilidade (UX/UI), utilizando a plataforma WordPress como base para projetos robustos e escaláveis.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-code text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Refinamento de Código (HTML/CSS) e Design System</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Sólida habilidade em manipulação de codificação front-end para refinar o design e garantir a precisão do layout, além de manter um padrão de código limpo e otimizado para performance.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Configuração de Hospedagens e Domínios</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Experiência na configuração de hospedagens (HostGator, etc.) e domínios, garantindo que o ambiente seja o mais rápido e estável possível para suportar alto volume de acessos e melhorar o SEO.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-line text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Estratégias de SEO e Conteúdo</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Implementação de táticas avançadas de Otimização para Mecanismos de Busca (SEO), com foco na parte técnica (velocidade, estrutura e rastreamento), que é a base para o sucesso do conteúdo.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-simple text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Gestão de Campanhas em Google Ads e Facebook Ads</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Expertise na Gestão de Campanhas em Google Ads e Facebook Ads, focando em ROI e segmentação precisa para atingir metas de negócios.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-microchip text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Ferramentas Essenciais e Automação (n8n, GTM, GitHub)</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Contato com n8n, GitHub, VSCode, ChatGPT e ElevenLabs para otimizar fluxos de trabalho e criar conteúdo inovador, além de apoio em design com Photoshop, CorelDRAW e Canva.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOLUÇÕES com cards melhorados -->
+<section id="solucoes" class="py-24 px-6 bg-charcoal">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="solucoesTag">O que ofereço</span>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">Soluções <span class="gradient-text" data-i18n="solucoesTitle">estratégicas</span></h2>
+            <p class="text-gray-muted text-lg max-w-2xl mx-auto" data-i18n="solucoesSub">Cada projeto é arquitetado sob medida para alcançar seus objetivos de negócio.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card p-7 rounded-2xl animate-on-scroll card-solucao min-h-[220px]">
+                <div class="icon-wrapper">
+                    <i class="fas fa-store text-accent text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3" data-i18n="solucao1Titulo">E-commerces</h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="solucao1Desc">Lojas virtuais otimizadas para conversão, com checkout fluido e estrutura para escala.</p>
+            </div>
+            <div class="card p-7 rounded-2xl animate-on-scroll card-solucao min-h-[220px]">
+                <div class="icon-wrapper">
+                    <i class="fas fa-building text-accent text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3" data-i18n="solucao2Titulo">Sites Institucionais</h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="solucao2Desc">Presença digital profissional com arquitetura que transmite autoridade e confiança.</p>
+            </div>
+            <div class="card p-7 rounded-2xl animate-on-scroll card-solucao min-h-[220px]">
+                <div class="icon-wrapper">
+                    <i class="fas fa-file-alt text-accent text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3" data-i18n="solucao3Titulo">Landing Pages</h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="solucao3Desc">Páginas de alta conversão com copy persuasiva e foco em um único objetivo.</p>
+            </div>
+            <div class="card p-7 rounded-2xl animate-on-scroll card-solucao min-h-[220px]">
+                <div class="icon-wrapper">
+                    <i class="fab fa-wordpress text-accent text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3" data-i18n="solucao4Titulo">WordPress</h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="solucao4Desc">Otimização e desenvolvimento de sites WP com foco em performance e segurança.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CASES com cards melhorados -->
+<section id="cases" class="py-24 px-6 bg-dark">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="casesTag">Cases de Sucesso</span>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">Projetos <span class="gradient-text" data-i18n="casesTitle">que entregam resultado</span></h2>
+            <p class="text-gray-muted text-lg max-w-2xl mx-auto" data-i18n="casesSub">Não é só código. É estratégia que vende.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
+                <div class="flex gap-1 mb-5"><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i></div>
+                <h3 class="text-xl font-bold mb-2" data-i18n="case1Titulo">+35% em Conversões</h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case1Desc">E-commerce de moda com checkout otimizado e redução de abandono de carrinho.</p>
+            </div>
+            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
+                <div class="flex gap-1 mb-5"><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i></div>
+                <h3 class="text-xl font-bold mb-2" data-i18n="case2Titulo">+200% Visibilidade</h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case2Desc">Site corporativo com SEO e rastreamento completo (GA4 + GTM).</p>
+            </div>
+            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
+                <div class="flex gap-1 mb-5"><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i></div>
+                <h3 class="text-xl font-bold mb-2" data-i18n="case3Titulo">8.3% Conversão</h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case3Desc">Landing page com copy persuasiva e foco em WhatsApp. Resultado em 30 dias.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section id="portfolio" class="py-24 px-6 bg-charcoal">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="portfolioTag">Portfólio</span>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5" data-i18n="portfolioTitle">Projetos Reais</h2>
+            <p class="text-gray-muted text-lg max-w-2xl mx-auto" data-i18n="portfolioSub">Alguns projetos que realizei</p>
+        </div>
+        
+       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <!-- 1. IDHL -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/idhl.png" data-title-pt="IDHL" data-title-en="IDHL" data-title-es="IDHL" data-desc-pt="Consultoria em Saúde Mental &amp; Desenvolvimento de Lideranças" data-desc-en="Mental Health Consulting &amp; Leadership Development" data-desc-es="Consultoría en Salud Mental &amp; Desarrollo de Liderazgo" data-url="https://idhl.org.br">
+        <img src="assets/img/idhl.png" alt="IDHL" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105" onerror="this.src='https://placehold.co/600x400/1A1A1F/FF6B35?text=IDHL'">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">IDHL</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Consultoria em Saúde Mental &amp; Desenvolvimento de Lideranças</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://idhl.org.br" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+    <!-- 2. Smarter Tech -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/smarter-tech.png" data-title-pt="Smarter Tech" data-title-en="Smarter Tech" data-title-es="Smarter Tech" data-desc-pt="Infraestrutura de TI, Segurança da Informação e Cloud Solutions" data-desc-en="IT Infrastructure, Information Security and Cloud Solutions" data-desc-es="Infraestructura de TI, Seguridad de la Información y Soluciones en la Nube" data-url="https://portal.smartertech.com.br">
+        <img src="assets/img/smarter-tech.png" alt="Smarter Tech" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105" onerror="this.src='https://placehold.co/600x400/1A1A1F/FF6B35?text=Smarter+Tech'">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">Smarter Tech</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Infraestrutura de TI &amp; Segurança da Informação</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://portal.smartertech.com.br" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+    <!-- 3. Advocacia Rodella -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/advocacia_rodella.png" data-title-pt="Advocacia Rodella" data-title-en="Rodella Law Firm" data-title-es="Bufete Rodella" data-desc-pt="Direito Empresarial, Imobiliário e Consultivo com atendimento personalizado" data-desc-en="Corporate, Real Estate and Advisory Law with personalized service" data-desc-es="Derecho Empresarial, Inmobiliario y Consultivo con atención personalizada" data-url="https://advocaciarodella.com.br/">
+        <img src="assets/img/advocacia_rodella.png" alt="Advocacia Rodella" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">Advocacia Rodella</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Direito Empresarial &amp; Imobiliário</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://advocaciarodella.com.br/" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+    <!-- 4. Victor Pros -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/victorpros.png" data-title-pt="Victor Pros" data-title-en="Victor Pros" data-title-es="Victor Pros" data-desc-pt="Projetos de reforma e design de interiores em Nova York" data-desc-en="Remodeling and interior design projects in New York" data-desc-es="Proyectos de renovación y diseño de interiores en Nueva York" data-url="https://victorpros.com">
+        <img src="assets/img/victorpros.png" alt="Victor Pros" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105" onerror="this.src='assets/img/victorpros.png'">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">Victor Pros</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Reformas &amp; Design de Interiores (EUA)</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://victorpros.com" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+    <!-- 5. Leite Confiança -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/leiteconfianca.png" data-title-pt="Leite Confiança" data-title-en="Trust Milk" data-title-es="Leche Confianza" data-desc-pt="Laticínios com leite puro, qualidade garantida e tradição familiar" data-desc-en="Dairy with pure milk, guaranteed quality and family tradition" data-desc-es="Lácteos con leche pura, calidad garantizada y tradición familiar" data-url="https://leiteconfianca.com.br/">
+        <img src="assets/img/leiteconfianca.png" alt="Leite Confiança" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">Leite Confiança</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Laticínios &amp; Produtos Lácteos</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://leiteconfianca.com.br/" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+    <!-- 6. PETsys Electronics -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/petsys.png" data-title-pt="PETsys Electronics" data-title-en="PETsys Electronics" data-title-es="PETsys Electronics" data-desc-pt="Sistemas eletrônicos avançados para imageamento PET e pesquisa científica" data-desc-en="Advanced electronic systems for PET imaging and scientific research" data-desc-es="Sistemas electrónicos avanzados para imageamento PET e investigación científica" data-url="https://www.petsyselectronics.com/">
+        <img src="assets/img/petsys.png" alt="PETsys Electronics" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">PETsys Electronics</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Tecnologia para imageamento PET &amp; pesquisa científica</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://www.petsyselectronics.com/" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+    <!-- 7. Salles Corban -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/sallesprimeecorban.png" data-title-pt="Salles Corban" data-title-en="Salles Corban" data-title-es="Salles Corban" data-desc-pt="Soluções financeiras inteligentes: crédito, consórcio, seguros e planejamento" data-desc-en="Smart financial solutions: credit, consortium, insurance and planning" data-desc-es="Soluciones financieras inteligentes: crédito, consorcio, seguros y planificación" data-url="https://sallesprimeecorban.com.br/">
+        <img src="assets/img/sallesprimeecorban.png" alt="Salles Corban" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">Salles Corban</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Soluções Financeiras &amp; Crédito</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://sallesprimeecorban.com.br/" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+    <!-- 8. Argelar -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/argelar.png" data-title-pt="Argelar" data-title-en="Argelar" data-title-es="Argelar" data-desc-pt="Automação industrial, manutenção e instalação de máquinas e sistemas de refrigeração" data-desc-en="Industrial automation, maintenance and installation of machinery and refrigeration systems" data-desc-es="Automatización industrial, mantenimiento e instalación de maquinarias y sistemas de refrigeración" data-url="https://argelar.tech/">
+        <img src="assets/img/argelar.png" alt="Argelar" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">Argelar</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Automação Industrial &amp; Manutenção</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://argelar.tech/" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+    <!-- 9. Transtac -->
+    <div class="card rounded-2xl overflow-hidden portfolio-card animate-on-scroll visible" data-img="assets/img/transtac.png" data-title-pt="Transtac" data-title-en="Transtac" data-title-es="Transtac" data-desc-pt="Operador logístico com soluções personalizadas em transporte e armazenagem de cargas" data-desc-en="Logistics operator with customized solutions in freight transport and storage" data-desc-es="Operador logístico con soluciones personalizadas en transporte y almacenamiento de cargas" data-url="https://transtac.com.br/">
+        <img src="assets/img/transtac.png" alt="Transtac" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105">
+        <div class="p-5">
+            <h3 class="portfolio-card-title text-xl font-bold mb-2">Transtac</h3>
+            <p class="portfolio-card-sub text-gray-muted text-sm">Operador Logístico &amp; Transporte de Cargas</p>
+            <a href="#" class="portfolio-link" onclick="event.stopPropagation(); window.open(this.getAttribute('data-url'), '_blank'); return false;" data-url="https://transtac.com.br/" data-i18n-portfolio-link="Ver site →">Ver site →</a>
+        </div>
+    </div>
+    
+</div>
+    </div>
+</section>
+
+<!-- Lightbox Modal com Link -->
+<div id="lightbox" class="lightbox-modal">
+    <div class="lightbox-content">
+        <button class="close-lightbox" id="closeLightbox">&times;</button>
+        <img id="lightbox-img" src="" alt="Detalhe do projeto">
+        <div class="mt-4">
+            <h3 id="lightbox-title" class="text-xl font-bold text-white"></h3>
+            <p id="lightbox-desc" class="text-gray-muted text-sm mt-2"></p>
+            <a id="lightbox-link" href="#" target="_blank" class="lightbox-link">Ver Site</a>
+        </div>
+    </div>
+</div>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="py-24 px-6 bg-dark">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="depoimentosTag">Depoimentos</span>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">O que dizem <span class="gradient-text" data-i18n="depoimentosTitle">meus clientes</span></h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card p-7 rounded-2xl animate-on-scroll">
+                <div class="flex gap-1 mb-4"><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i></div>
+                <p class="text-gray-muted text-sm leading-relaxed mb-4" data-i18n="depoimento1">
+                    "Em 2 semanas, meu WhatsApp recebeu 30% mais contatos qualificados. A velocidade do site fez toda diferença."
+                </p>
+                <h4 class="font-semibold" data-i18n="depoimento1Nome">Carlos Mendes</h4>
+                <p class="text-gray-muted text-xs" data-i18n="depoimento1Cargo">Indústria Pesada</p>
+            </div>
+            <div class="card p-7 rounded-2xl animate-on-scroll">
+                <div class="flex gap-1 mb-4"><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i></div>
+                <p class="text-gray-muted text-sm leading-relaxed mb-4" data-i18n="depoimento2">
+                    "Agendamentos via WhatsApp aumentaram 60%. O Flávio entendeu perfeitamente a necessidade do meu negócio."
+                </p>
+                <h4 class="font-semibold" data-i18n="depoimento2Nome">Dra. Ana Lúcia</h4>
+                <p class="text-gray-muted text-xs" data-i18n="depoimento2Cargo">Clínica Odontológica</p>
+            </div>
+            <div class="card p-7 rounded-2xl animate-on-scroll">
+                <div class="flex gap-1 mb-4"><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i><i class="fas fa-star text-accent text-sm"></i></div>
+                <p class="text-gray-muted text-sm leading-relaxed mb-4" data-i18n="depoimento3">
+                    "Site carrega 3x mais rápido. Taxa de abandono no checkout reduziu 35%. Investimento valeu cada centavo."
+                </p>
+                <h4 class="font-semibold" data-i18n="depoimento3Nome">Ricardo Silva</h4>
+                <p class="text-gray-muted text-xs" data-i18n="depoimento3Cargo">E-commerce Moda</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CARROSSEL DE SERVIÇOS -->
+<section class="py-12 px-6 bg-charcoal border-t border-b border-accent/10">
+    <div class="max-w-7xl mx-auto">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span><i class="fab fa-wordpress"></i> WordPress</span>
+                <span><i class="fab fa-elementor"></i> Elementor</span>
+                <span><i class="fas fa-cart-shopping"></i> E-commerce</span>
+                <span><i class="fas fa-tachometer-alt"></i> Velocidade</span>
+                <span><i class="fab fa-google"></i> Google Tag Manager</span>
+                <span><i class="fab fa-google"></i> Google Analytics</span>
+                <span><i class="fas fa-chart-line"></i> SEO</span>
+                <span><i class="fab fa-js"></i> JavaScript</span>
+                <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span><i class="fab fa-html5"></i> HTML5</span>
+                <span><i class="fab fa-wordpress"></i> WordPress</span>
+                <span><i class="fab fa-elementor"></i> Elementor</span>
+                <span><i class="fas fa-cart-shopping"></i> E-commerce</span>
+                <span><i class="fas fa-tachometer-alt"></i> Velocidade</span>
+                <span><i class="fab fa-google"></i> Google Tag Manager</span>
+                <span><i class="fab fa-google"></i> Google Analytics</span>
+                <span><i class="fas fa-chart-line"></i> SEO</span>
+                <span><i class="fab fa-js"></i> JavaScript</span>
+                <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span><i class="fab fa-html5"></i> HTML5</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PLANOS -->
+<section id="planos" class="py-24 px-6 bg-dark">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="planosTag">Orçamento Inicial</span>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">Escolha o <span class="gradient-text" data-i18n="planosTitle">plano ideal</span></h2>
+            <p class="text-gray-muted text-lg max-w-2xl mx-auto" data-i18n="planosSub">Arquitetura em fases que se adapta ao momento do seu negócio.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card p-8 rounded-2xl animate-on-scroll">
+                <h3 class="text-2xl font-bold mb-2" data-i18n="plano1Titulo">Essencial</h3>
+                <p class="text-gray-muted text-sm mb-6" data-i18n="plano1Desc">Para quem já tem o conteúdo definido</p>
+                <div class="text-4xl font-bold mb-6">R$ 350<span class="text-gray-muted text-base font-normal"> - 500</span></div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano1Item1">Implementação no WordPress/Elementor</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano1Item2">100% responsivo</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano1Item3">WhatsApp integrado</span></li>
+                </ul>
+                <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20o%20plano%20Essencial" target="_blank" class="btn-outline block w-full py-3 text-center rounded-xl font-medium" data-i18n="plano1Btn">Solicitar</a>
+            </div>
+            
+            <div class="card-highlight p-8 rounded-2xl relative animate-on-scroll">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2"><span class="bg-accent text-white px-4 py-1 rounded-full text-xs font-bold" data-i18n="plano2Badge">Mais escolhido</span></div>
+                <h3 class="text-2xl font-bold mb-2" data-i18n="plano2Titulo">Estratégico</h3>
+                <p class="text-gray-muted text-sm mb-6" data-i18n="plano2Desc">Copy persuasiva e rastreamento</p>
+                <div class="text-4xl font-bold mb-6">R$ 800<span class="text-gray-muted text-base font-normal"> - 1.200</span></div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano2Item1">Tudo do Essencial +</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano2Item2">Copy persuasiva</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano2Item3">GA4 + Meta Pixel instalados</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano2Item4">Otimização de velocidade</span></li>
+                </ul>
+                <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20o%20plano%20Estrat%C3%A9gico" target="_blank" class="btn-primary block w-full py-3 text-center rounded-xl font-semibold" data-i18n="plano2Btn">Quero Vender Mais</a>
+            </div>
+            
+            <div class="card p-8 rounded-2xl animate-on-scroll">
+                <h3 class="text-2xl font-bold mb-2" data-i18n="plano3Titulo">Performance</h3>
+                <p class="text-gray-muted text-sm mb-6" data-i18n="plano3Desc">Rastreamento avançado + consultoria</p>
+                <div class="text-4xl font-bold mb-6">R$ 1.800<span class="text-gray-muted text-base font-normal">+</span></div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano3Item1">Tudo do Estratégico +</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano3Item2">Google Tag Manager</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano3Item3">Eventos de conversão</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano3Item4">Consultoria + suporte 15 dias</span></li>
+                </ul>
+                <a href="https://wa.me/5543996432679?text=Oi%2C%20quero%20o%20plano%20Performance" target="_blank" class="btn-outline block w-full py-3 text-center rounded-xl font-medium" data-i18n="plano3Btn">Conversar sobre Projeto</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta" class="py-24 px-6 bg-dark border-t border-accent/10">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
+            <i class="fas fa-rocket text-accent text-sm rocket-icon"></i>
+            <span class="text-accent text-sm font-medium" data-i18n="ctaTag">Vamos começar?</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-5" data-i18n="ctaTitle">Pronto para decolar?</h2>
+        <p class="text-gray-muted text-lg mb-10 max-w-2xl mx-auto" data-i18n="ctaSub">Fale comigo e vamos construir seu negócio juntos.</p>
+        <a href="https://wa.me/5543996432679?text=Oi%2C%20vim%20do%20site%20e%20quero%20saber%20mais" target="_blank" class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white">
+            <i class="fab fa-whatsapp text-xl"></i>
+            <span data-i18n="ctaBtn">Falar no WhatsApp</span>
+        </a>
+    </div>
+</section>
+
+<!-- RODAPÉ melhorado para mobile -->
+<footer class="py-12 px-6 border-t border-gray-light/20 bg-dark">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8 mb-8 footer-grid">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fas fa-code text-accent text-xl"></i>
+                    <span class="text-lg font-semibold"><span class="logo-text">Flávio</span><span class="logo-accent">Dev</span></span>
+                </div>
+                <p class="text-gray-muted text-sm" data-i18n="footerDesc">Desenvolvedor Web focado em criar soluções modernas, funcionais e estratégicas que atendem pequenas e médias empresas.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4" data-i18n="footerLinksTitle">Links Rápidos</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#sobre" class="text-gray-muted hover:text-accent transition" data-i18n="footerSobre">Sobre</a></li>
+                    <li><a href="#solucoes" class="text-gray-muted hover:text-accent transition" data-i18n="footerSolucoes">Soluções</a></li>
+                    <li><a href="#cases" class="text-gray-muted hover:text-accent transition" data-i18n="footerSolucoes">Cases</a></li>
+                    <li><a href="#portfolio" class="text-gray-muted hover:text-accent transition" data-i18n="footerPortfolio">Portfólio</a></li>
+                    <li><a href="#planos" class="text-gray-muted hover:text-accent transition" data-i18n="footerPlanos">Planos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4" data-i18n="footerContatoTitle">Contato</h4>
+                <ul class="space-y-2 text-sm">
+                    <li class="text-gray-muted"><i class="fab fa-whatsapp text-accent mr-2"></i> (43) 99643-2679</li>
+                    <li class="text-gray-muted"><i class="far fa-envelope text-accent mr-2"></i> flanegociosonline@gmail.com</li>
+                </ul>
+                <div class="flex gap-5 mt-5">
+                    <a href="#" class="text-gray-muted footer-social-icon text-xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-muted footer-social-icon text-xl"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4" data-i18n="footerPerformanceTitle">Performance & Confiança</h4>
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-chart-simple text-accent"></i>
+                        <span class="text-gray-muted text-sm" data-i18n="footerPerformance1">PageSpeed Insights 90+</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shield-alt text-accent"></i>
+                        <span class="text-gray-muted text-sm" data-i18n="footerPerformance2">SSL Seguro</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-mobile-alt text-accent"></i>
+                        <span class="text-gray-muted text-sm" data-i18n="footerPerformance3">100% Responsivo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-8 border-t border-gray-light/20">
+            <p class="text-gray-muted text-sm" data-i18n="footerCopyright">&copy; 2026 Flávio Lopes - Desenvolvedor Web. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5543996432679" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Botão Voltar ao Topo -->
+<button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    // ========================
+    // TRADUÇÃO COMPLETA
+    // ========================
+    
+    const translations = {
+        pt: {
+            sobreTitulo: "Desenvolvedor Web",
+            sobreTag: "Minha Trajetória",
+            sobreTitle1: "De arte finalista a",
+            sobreTitle2: "desenvolvedor web",
+            solucoesTag: "O que ofereço",
+            solucoesTitle: "estratégicas",
+            solucoesSub: "Cada projeto é arquitetado sob medida para alcançar seus objetivos de negócio.",
+            solucao1Titulo: "E-commerces",
+            solucao1Desc: "Lojas virtuais otimizadas para conversão, com checkout fluido e estrutura para escala.",
+            solucao2Titulo: "Sites Institucionais",
+            solucao2Desc: "Presença digital profissional com arquitetura que transmite autoridade e confiança.",
+            solucao3Titulo: "Landing Pages",
+            solucao3Desc: "Páginas de alta conversão com copy persuasiva e foco em um único objetivo.",
+            solucao4Titulo: "WordPress",
+            solucao4Desc: "Otimização e desenvolvimento de sites WP com foco em performance e segurança.",
+            casesTag: "Cases de Sucesso",
+            casesTitle: "que entregam resultado",
+            casesSub: "Não é só código. É estratégia que vende.",
+            case1Titulo: "+35% em Conversões",
+            case1Desc: "E-commerce de moda com checkout otimizado e redução de abandono de carrinho.",
+            case2Titulo: "+200% Visibilidade",
+            case2Desc: "Site corporativo com SEO e rastreamento completo (GA4 + GTM).",
+            case3Titulo: "8.3% Conversão",
+            case3Desc: "Landing page com copy persuasiva e foco em WhatsApp. Resultado em 30 dias.",
+            planosTag: "Investimento",
+            planosTitle: "plano ideal",
+            planosSub: "Arquitetura técnica que se adapta ao momento do seu negócio.",
+            plano1Titulo: "Essencial",
+            plano1Desc: "Para quem já tem o conteúdo definido",
+            plano1Item1: "Implementação no WordPress/Elementor",
+            plano1Item2: "100% responsivo",
+            plano1Item3: "WhatsApp integrado",
+            plano1Btn: "Solicitar",
+            plano2Badge: "Mais escolhido",
+            plano2Titulo: "Estratégico",
+            plano2Desc: "Copy persuasiva e rastreamento",
+            plano2Item1: "Tudo do Essencial +",
+            plano2Item2: "Copy persuasiva",
+            plano2Item3: "GA4 + Meta Pixel instalados",
+            plano2Item4: "Otimização de velocidade",
+            plano2Btn: "Quero Vender Mais",
+            plano3Titulo: "Performance",
+            plano3Desc: "Rastreamento avançado + consultoria",
+            plano3Item1: "Tudo do Estratégico +",
+            plano3Item2: "Google Tag Manager",
+            plano3Item3: "Eventos de conversão",
+            plano3Item4: "Consultoria + suporte 15 dias",
+            plano3Btn: "Conversar sobre Projeto",
+            depoimentosTag: "Depoimentos",
+            depoimentosTitle: "meus clientes",
+            depoimento1: "\"Em 2 semanas, meu WhatsApp recebeu 30% mais contatos qualificados. A velocidade do site fez toda diferença.\"",
+            depoimento1Nome: "Carlos Mendes",
+            depoimento1Cargo: "Indústria Pesada",
+            depoimento2: "\"Agendamentos via WhatsApp aumentaram 60%. O Flávio entendeu perfeitamente a necessidade do meu negócio.\"",
+            depoimento2Nome: "Dra. Ana Lúcia",
+            depoimento2Cargo: "Clínica Odontológica",
+            depoimento3: "\"Site carrega 3x mais rápido. Taxa de abandono no checkout reduziu 35%. Investimento valeu cada centavo.\"",
+            depoimento3Nome: "Ricardo Silva",
+            depoimento3Cargo: "E-commerce Moda",
+            ctaTag: "Vamos começar?",
+            ctaTitle: "Pronto para decolar?",
+            ctaSub: "Fale comigo e vamos construir seu negócio juntos.",
+            ctaBtn: "Falar no WhatsApp",
+            footerDesc: "Desenvolvedor Web focado em performance, SEO e conversão.",
+            footerLinksTitle: "Links Rápidos",
+            footerSobre: "Sobre",
+            footerSolucoes: "Soluções",
+            footerPortfolio: "Portfólio",
+            footerPlanos: "Planos",
+            footerContatoTitle: "Contato",
+            footerPerformanceTitle: "Performance & Confiança",
+            footerPerformance1: "PageSpeed Insights 90+",
+            footerPerformance2: "SSL Seguro",
+            footerPerformance3: "100% Responsivo",
+            footerCopyright: "© 2026 Flávio Lopes - Desenvolvedor Web. Todos os direitos reservados.",
+            portfolioTag: "Portfólio",
+            portfolioTitle: "Projetos Reais",
+            portfolioSub: "Alguns dos projetos reais que entregam resultado.",
+            portfolioLinkText: "Ver site →"
+        },
+        en: {
+            sobreTitulo: "Web Developer",
+            sobreTag: "My Journey",
+            sobreTitle1: "From pre-press artist to",
+            sobreTitle2: "web developer",
+            solucoesTag: "What I offer",
+            solucoesTitle: "strategic",
+            solucoesSub: "Each project is tailor-made to achieve your business goals.",
+            solucao1Titulo: "E-commerce",
+            solucao1Desc: "Virtual stores optimized for conversion, with smooth checkout and structure for scale.",
+            solucao2Titulo: "Corporate Websites",
+            solucao2Desc: "Professional digital presence with architecture that conveys authority and trust.",
+            solucao3Titulo: "Landing Pages",
+            solucao3Desc: "High-conversion pages with persuasive copy and focus on a single goal.",
+            solucao4Titulo: "WordPress",
+            solucao4Desc: "Optimization and development of WP sites focused on performance and security.",
+            casesTag: "Success Cases",
+            casesTitle: "that deliver results",
+            casesSub: "It's not just code. It's strategy that sells.",
+            case1Titulo: "+35% in Conversions",
+            case1Desc: "Fashion e-commerce with optimized checkout and reduced cart abandonment.",
+            case2Titulo: "+200% Visibility",
+            case2Desc: "Corporate website with SEO and complete tracking (GA4 + GTM).",
+            case3Titulo: "8.3% Conversion",
+            case3Desc: "Landing page with persuasive copy focused on WhatsApp. Result in 30 days.",
+            planosTag: "Investment",
+            planosTitle: "ideal plan",
+            planosSub: "Technical architecture that adapts to your business moment.",
+            plano1Titulo: "Essential",
+            plano1Desc: "For those who already have defined content",
+            plano1Item1: "Implementation in WordPress/Elementor",
+            plano1Item2: "100% responsive",
+            plano1Item3: "WhatsApp integrated",
+            plano1Btn: "Request",
+            plano2Badge: "Most chosen",
+            plano2Titulo: "Strategic",
+            plano2Desc: "Persuasive copy + tracking",
+            plano2Item1: "Everything from Essential +",
+            plano2Item2: "Persuasive copy",
+            plano2Item3: "GA4 + Meta Pixel installed",
+            plano2Item4: "Speed optimization",
+            plano2Btn: "I Want to Sell More",
+            plano3Titulo: "Performance",
+            plano3Desc: "Advanced tracking + consulting",
+            plano3Item1: "Everything from Strategic +",
+            plano3Item2: "Google Tag Manager",
+            plano3Item3: "Conversion events",
+            plano3Item4: "Consulting + 15-day support",
+            plano3Btn: "Talk about Project",
+            depoimentosTag: "Testimonials",
+            depoimentosTitle: "my clients",
+            depoimento1: "\"In 2 weeks, my WhatsApp received 30% more qualified contacts. The site's speed made all the difference.\"",
+            depoimento1Nome: "Carlos Mendes",
+            depoimento1Cargo: "Heavy Industry",
+            depoimento2: "\"Appointments via WhatsApp increased by 60%. Flávio perfectly understood my business needs.\"",
+            depoimento2Nome: "Dr. Ana Lúcia",
+            depoimento2Cargo: "Dental Clinic",
+            depoimento3: "\"Site loads 3x faster. Cart abandonment rate reduced by 35%. Investment was worth every penny.\"",
+            depoimento3Nome: "Ricardo Silva",
+            depoimento3Cargo: "Fashion E-commerce",
+            ctaTag: "Let's start?",
+            ctaTitle: "Ready to take off?",
+            ctaSub: "Talk to me and let's build your business together.",
+            ctaBtn: "Talk on WhatsApp",
+            footerDesc: "Web Developer focused on performance, SEO and conversion.",
+            footerLinksTitle: "Quick Links",
+            footerSobre: "About",
+            footerSolucoes: "Solutions",
+            footerPortfolio: "Portfolio",
+            footerPlanos: "Plans",
+            footerContatoTitle: "Contact",
+            footerPerformanceTitle: "Performance & Trust",
+            footerPerformance1: "PageSpeed Insights 90+",
+            footerPerformance2: "Secure SSL",
+            footerPerformance3: "100% Responsive",
+            footerCopyright: "© 2026 Flávio Lopes - Web Developer. All rights reserved.",
+            portfolioTag: "Portfolio",
+            portfolioTitle: "Real Projects",
+            portfolioSub: "Some of the real projects that deliver results.",
+            portfolioLinkText: "View project →"
+        },
+        es: {
+            sobreTitulo: "Desarrollador Web",
+            sobreTag: "Mi Trayectoria",
+            sobreTitle1: "De arte finalista a",
+            sobreTitle2: "desarrollador web",
+            solucoesTag: "Lo que ofrezco",
+            solucoesTitle: "estratégicas",
+            solucoesSub: "Cada proyecto está diseñado a medida para alcanzar sus objetivos de negocio.",
+            solucao1Titulo: "E-commerces",
+            solucao1Desc: "Tiendas virtuales optimizadas para conversión, con checkout fluido y estructura para escalar.",
+            solucao2Titulo: "Sitios Corporativos",
+            solucao2Desc: "Presencia digital profesional con arquitectura que transmite autoridad y confianza.",
+            solucao3Titulo: "Landing Pages",
+            solucao3Desc: "Páginas de alta conversión con copy persuasivo y enfoque en un solo objetivo.",
+            solucao4Titulo: "WordPress",
+            solucao4Desc: "Optimización y desarrollo de sitios WP enfocado en rendimiento y seguridad.",
+            casesTag: "Casos de Éxito",
+            casesTitle: "que entregan resultados",
+            casesSub: "No es solo código. Es estrategia que vende.",
+            case1Titulo: "+35% en Conversiones",
+            case1Desc: "E-commerce de moda con checkout optimizado y reducción de abandono del carrito.",
+            case2Titulo: "+200% Visibilidad",
+            case2Desc: "Sitio corporativo con SEO y seguimiento completo (GA4 + GTM).",
+            case3Titulo: "8.3% Conversión",
+            case3Desc: "Landing page con copy persuasivo enfocado en WhatsApp. Resultado en 30 días.",
+            planosTag: "Inversión",
+            planosTitle: "plan ideal",
+            planosSub: "Arquitectura técnica que se adapta al momento de su negocio.",
+            plano1Titulo: "Esencial",
+            plano1Desc: "Para quienes ya tienen el contenido definido",
+            plano1Item1: "Implementación en WordPress/Elementor",
+            plano1Item2: "100% responsivo",
+            plano1Item3: "WhatsApp integrado",
+            plano1Btn: "Solicitar",
+            plano2Badge: "Más elegido",
+            plano2Titulo: "Estratégico",
+            plano2Desc: "Copy persuasivo + seguimiento",
+            plano2Item1: "Todo lo del Esencial +",
+            plano2Item2: "Copy persuasivo",
+            plano2Item3: "GA4 + Meta Pixel instalados",
+            plano2Item4: "Optimización de velocidad",
+            plano2Btn: "Quiero Vender Más",
+            plano3Titulo: "Rendimiento",
+            plano3Desc: "Seguimiento avanzado + consultoría",
+            plano3Item1: "Todo lo del Estratégico +",
+            plano3Item2: "Google Tag Manager",
+            plano3Item3: "Eventos de conversión",
+            plano3Item4: "Consultoría + soporte 15 días",
+            plano3Btn: "Hablar sobre Proyecto",
+            depoimentosTag: "Testimonios",
+            depoimentosTitle: "mis clientes",
+            depoimento1: "\"En 2 semanas, mi WhatsApp recibió un 30% más de contactos calificados. La velocidad del sitio marcó la diferencia.\"",
+            depoimento1Nome: "Carlos Mendes",
+            depoimento1Cargo: "Industria Pesada",
+            depoimento2: "\"Las citas por WhatsApp aumentaron un 60%. Flávio entendió perfectamente las necesidades de mi negocio.\"",
+            depoimento2Nome: "Dra. Ana Lúcia",
+            depoimento2Cargo: "Clínica Odontológica",
+            depoimento3: "\"El sitio carga 3 veces más rápido. La tasa de abandono del checkout se redujo en un 35%. La inversión valió cada centavo.\"",
+            depoimento3Nome: "Ricardo Silva",
+            depoimento3Cargo: "E-commerce Moda",
+            ctaTag: "¿Empezamos?",
+            ctaTitle: "¿Listo para despegar?",
+            ctaSub: "Hable conmigo y construyamos su negocio juntos.",
+            ctaBtn: "Hablar por WhatsApp",
+            footerDesc: "Desarrollador Web enfocado en rendimiento, SEO y conversión.",
+            footerLinksTitle: "Enlaces Rápidos",
+            footerSobre: "Sobre",
+            footerSolucoes: "Soluciones",
+            footerPortfolio: "Portafolio",
+            footerPlanos: "Planes",
+            footerContatoTitle: "Contacto",
+            footerPerformanceTitle: "Rendimiento & Confianza",
+            footerPerformance1: "PageSpeed Insights 90+",
+            footerPerformance2: "SSL Seguro",
+            footerPerformance3: "100% Responsivo",
+            footerCopyright: "© 2026 Flávio Lopes - Desarrollador Web. Todos los derechos reservados.",
+            portfolioTag: "Portafolio",
+            portfolioTitle: "Proyectos Reales",
+            portfolioSub: "Algunos de los proyectos reales que entregan resultados.",
+            portfolioLinkText: "Ver proyecto →"
+        }
+    };
+    
+    let currentLang = 'pt';
+    
+    function updateLanguage(lang) {
+        const t = translations[lang];
+        if (!t) return;
+        
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (t[key]) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = t[key];
+                } else {
+                    el.innerHTML = t[key];
+                }
+            }
+        });
+        
+        document.querySelectorAll('.menu-link').forEach(el => {
+            const key = el.getAttribute('data-key');
+            if (key && t[`menu_${key}`]) {
+                el.innerHTML = t[`menu_${key}`];
+            }
+        });
+        
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            const titleEl = card.querySelector('.portfolio-card-title');
+            const subEl = card.querySelector('.portfolio-card-sub');
+            const linkEl = card.querySelector('.portfolio-link');
+            
+            if (titleEl) {
+                const ptText = titleEl.getAttribute('data-i18n-pt');
+                const enText = titleEl.getAttribute('data-i18n-en');
+                const esText = titleEl.getAttribute('data-i18n-es');
+                if (lang === 'pt' && ptText) titleEl.innerHTML = ptText;
+                else if (lang === 'en' && enText) titleEl.innerHTML = enText;
+                else if (lang === 'es' && esText) titleEl.innerHTML = esText;
+            }
+            
+            if (linkEl) {
+                linkEl.innerHTML = t.portfolioLinkText || "Ver site →";
+            }
+            
+            const titlePt = card.getAttribute('data-title-pt');
+            const titleEn = card.getAttribute('data-title-en');
+            const titleEs = card.getAttribute('data-title-es');
+            const descPt = card.getAttribute('data-desc-pt');
+            const descEn = card.getAttribute('data-desc-en');
+            const descEs = card.getAttribute('data-desc-es');
+            const url = card.getAttribute('data-url');
+            
+            if (lang === 'pt') {
+                card.setAttribute('data-title', titlePt);
+                card.setAttribute('data-desc', descPt);
+                card.setAttribute('data-url', url);
+            } else if (lang === 'en') {
+                card.setAttribute('data-title', titleEn);
+                card.setAttribute('data-desc', descEn);
+            } else if (lang === 'es') {
+                card.setAttribute('data-title', titleEs);
+                card.setAttribute('data-desc', descEs);
+            }
+        });
+        
+        currentLang = lang;
+    }
+    
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            if (lang === currentLang) return;
+            
+            document.querySelectorAll('.lang-btn').forEach(b => {
+                b.classList.remove('text-accent');
+                b.classList.add('text-gray-muted');
+            });
+            btn.classList.remove('text-gray-muted');
+            btn.classList.add('text-accent');
+            
+            updateLanguage(lang);
+        });
+    });
+    
+    // Lightbox com link
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxLink = document.getElementById('lightbox-link');
+    const closeLightbox = document.getElementById('closeLightbox');
+    
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            if (e.target.classList.contains('portfolio-link') || e.target.parentElement?.classList.contains('portfolio-link')) {
+                return;
+            }
+            const imgSrc = card.getAttribute('data-img');
+            const title = card.getAttribute('data-title');
+            const desc = card.getAttribute('data-desc');
+            const url = card.getAttribute('data-url');
+            
+            lightboxImg.src = imgSrc;
+            lightboxTitle.textContent = title;
+            lightboxDesc.textContent = desc;
+            if (url && url !== '#') {
+                lightboxLink.href = url;
+                lightboxLink.style.display = 'inline-block';
+            } else {
+                lightboxLink.style.display = 'none';
+            }
+            lightbox.classList.add('active');
+        });
+    });
+    
+    closeLightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+    
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) lightbox.classList.remove('active');
+    });
+    
+    // Menu mobile
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (hamburger) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
         });
-        
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
+    }
+    
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (hamburger) hamburger.classList.remove('active');
+            if (mobileMenu) mobileMenu.classList.remove('active');
         });
+    });
+    
+    // Scroll header hide/show e botão back to top
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
         
-        let lastScroll = 0;
-        const header = document.querySelector('header');
+        if (currentScroll > 150 && currentScroll > lastScroll) {
+            if (header) header.classList.add('hidden');
+        } else {
+            if (header) header.classList.remove('hidden');
+        }
         
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            if (currentScroll > 150 && currentScroll > lastScroll) {
-                header.classList.add('hidden');
-            } else {
-                header.classList.remove('hidden');
-            }
-            lastScroll = currentScroll;
+        if (currentScroll > 300) {
+            if (backToTop) backToTop.classList.add('visible');
+        } else {
+            if (backToTop) backToTop.classList.remove('visible');
+        }
+        
+        lastScroll = currentScroll;
+    });
+    
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-        
-        const slideTrack = document.getElementById('slideTrack');
-        const slides = document.querySelectorAll('.slide');
-        const prevBtn = document.getElementById('slidePrev');
-        const nextBtn = document.getElementById('slideNext');
-        const dotsContainer = document.getElementById('slideDots');
-        
-        let currentIndex = 0;
-        let slideInterval;
-        
-        function updateDots() {
-            const dots = document.querySelectorAll('.slide-dot');
-            dots.forEach((dot, idx) => {
-                if (idx === currentIndex) dot.classList.add('active');
-                else dot.classList.remove('active');
-            });
-        }
-        
-        function goToSlide(index) {
-            currentIndex = (index + slides.length) % slides.length;
-            slideTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-            updateDots();
-        }
-        
-        function nextSlide() { goToSlide(currentIndex + 1); }
-        function prevSlide() { goToSlide(currentIndex - 1); }
-        
-        if (slides.length > 0) {
-            slides.forEach((_, i) => {
-                const dot = document.createElement('div');
-                dot.classList.add('slide-dot');
-                if (i === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => goToSlide(i));
-                dotsContainer.appendChild(dot);
-            });
-            
-            prevBtn.addEventListener('click', () => {
-                clearInterval(slideInterval);
-                prevSlide();
-                startAutoSlide();
-            });
-            
-            nextBtn.addEventListener('click', () => {
-                clearInterval(slideInterval);
-                nextSlide();
-                startAutoSlide();
-            });
-            
-            function startAutoSlide() {
-                slideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    // Animação no scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
-            startAutoSlide();
-        }
-    </script>
+        });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
