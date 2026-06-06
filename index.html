@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
-    <title>FlávioDev | Desenvolvedor Web</title>
+    <title>Flávio Lopes | Desenvolvedor Web</title>
     
     <!-- Meta Tags SEO -->
-    <meta name="description" content="Desenvolvedor Web especializado em criação de sites, landing pages e e-commerces com performance, SEO e rastreamento completo.">
-    <meta name="keywords" content="desenvolvedor web, wordpress, landing page, e-commerce, seo, performance web, flaviodev">
+    <meta name="description" content="Criação de sites profissionais, landing pages, lojas virtuais e soluções em WordPress para empresas e profissionais.">
+    <meta name="keywords" content="Flávio Lopes, desenvolvedor web, criação de sites, wordpress, landing page, loja virtual, seo, sites profissionais">
     <meta name="author" content="Flávio Lopes">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="FlávioDev | Desenvolvedor Web">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://flaviodev.reviewnexus.blog/">
-    <meta property="og:image" content="https://flaviodev.reviewnexus.blog/logo-flavio.png">
-    <meta property="og:description" content="Transforme visitantes em clientes com sites de alta performance e SEO.">
-    <meta property="og:locale" content="pt_BR">
+     <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Flávio Lopes | Desenvolvedor Web">
     
-    <!-- Twitter Card -->
+    <meta property="og:type" content="website">
+    
+    <meta property="og:url" content="https://flaviodev.reviewnexus.blog/">
+    
+    <meta property="og:image" content="https://flaviodev.reviewnexus.blog/logo-flavio.png">
+    
+    <meta property="og:description" content="Sites profissionais, landing pages, WordPress e soluções digitais para empresas e profissionais.">
+    
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FlávioDev | Desenvolvedor Web">
-    <meta name="twitter:description" content="Sites que carregam rápido e convertem visitantes em clientes.">
+    
+    <meta name="twitter:title" content="Flávio Lopes | Desenvolvedor Web">
+    
+    <meta name="twitter:description" content="Criação de sites profissionais, landing pages e soluções digitais para o seu negócio.">
+
     
     <!-- Canonical -->
     <link rel="canonical" href="https://flaviodev.reviewnexus.blog/">
@@ -501,7 +508,7 @@
         
         @media (max-width: 640px) {
             .text-6xl { font-size: 2rem !important; }
-            .card-solucao, .card-case { min-height: auto; }
+            .card-solucao, .card-case { min-height: auto; }		
             .icon-wrapper { width: 44px; height: 44px; }
             .footer-grid { gap: 2rem; }
         }
@@ -526,6 +533,9 @@
     object-fit: cover;
     object-position: center top;  /* posiciona a imagem: top, bottom, center, ou px ex: 0px 10px */
 }
+
+::before {    font-size: 1.6em;}
+.fa-code:before { content: "\f121"; font-size: 22px; }
 		
     </style>
     
@@ -538,7 +548,7 @@
         gtag('config', 'G-B5CE8GNQK4');
     </script>
     
-    <!-- Schema.org JSON-LD -->
+       <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -546,7 +556,15 @@
       "name": "Flávio Lopes",
       "url": "https://flaviodev.reviewnexus.blog/",
       "jobTitle": "Desenvolvedor Web",
-      "knowsAbout": ["WordPress", "SEO", "Performance Web", "Landing Pages", "Google Tag Manager", "Google Analytics"]
+      "description": "Desenvolvimento de sites profissionais, landing pages, WordPress e soluções digitais.",
+      "knowsAbout": [
+        "WordPress",
+        "SEO",
+        "Landing Pages",
+        "E-commerce",
+        "Google Analytics",
+        "Google Tag Manager"
+      ]
     }
     </script>
 </head>
@@ -558,19 +576,24 @@
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-2">
             <i class="fas fa-code text-accent text-2xl"></i>
-            <span class="text-xl font-semibold tracking-tight">
-                <span class="logo-text">Flávio</span><span class="logo-accent"> Lopes</span>
+            <span class="text-xl  tracking-tight">
+                <span class="logo-text">Flávio</span><span class="logo-accent"> Lopes </span>
             </span>
         </div>
         
         <!-- Menu Desktop -->
         <nav class="hidden md:flex gap-8">
-            <a href="#sobre" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="sobre">Sobre</a>
+			<a href="#" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="sobre">Início</a>
+			<a href="#sobre" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="sobre">Sobre</a>
             <a href="#solucoes" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="solucoes">Soluções</a>
-            <a href="#cases" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="cases">Cases</a>
-            <a href="#portfolio" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="portfolio">Portfólio</a>
-            <a href="#planos" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="planos">Planos</a>
-            <a href="#depoimentos" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="depoimentos">Depoimentos</a>
+			 <a href="#portfolio" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="portfolio">Portfólio</a>
+			 <a href="#depoimentos" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="depoimentos">Depoimentos</a>
+			  <a href="#planos" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="planos">Planos</a>
+    
+            <a href="#cta" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="contato">Contato</a>
+           
+           
+            
         </nav>
         
         <div class="hidden md:flex items-center gap-4">
@@ -587,12 +610,14 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="flex flex-col gap-5">
-            <a href="#sobre" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="sobre">Sobre</a>
-            <a href="#solucoes" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="solucoes">Soluções</a>
-            <a href="#cases" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="cases">Cases</a>
-            <a href="#portfolio" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="portfolio">Portfólio</a>
-            <a href="#planos" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="planos">Planos</a>
-            <a href="#depoimentos" class="menu-link py-2 text-gray-muted hover:text-accent transition text-base" data-key="depoimentos">Depoimentos</a>
+           <a href="#" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="sobre">Início</a>
+			<a href="#sobre" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="sobre">Sobre</a>
+            <a href="#solucoes" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="solucoes">Soluções</a>
+			 <a href="#portfolio" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="portfolio">Portfólio</a>
+			 <a href="#depoimentos" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="depoimentos">Depoimentos</a>
+			  <a href="#planos" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="planos">Planos</a>
+    
+            <a href="#cta" class="menu-link text-gray-muted hover:text-accent transition text-sm font-medium" data-key="contato">Contato</a>
             <div class="flex gap-6 justify-center py-2">
                 <button class="lang-btn text-sm font-medium text-accent" data-lang="pt">PT</button>
                 <button class="lang-btn text-sm font-medium text-gray-muted hover:text-accent" data-lang="en">EN</button>
@@ -613,131 +638,26 @@
     <div class="max-w-6xl mx-auto relative z-10 w-full">
         <div class="text-center mb-12 animate-on-scroll">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
-                <i class="fas fa-rocket text-accent text-sm rocket-icon"></i>
-                <span class="text-accent text-sm font-medium">Arquiteto de Soluções Web</span>
+                <i class="fas fa-globe text-accent text-sm rocket-icon"></i>
+                <span class="text-accent text-sm font-medium">Sites • WordPress • SEO</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-                Transforme visitantes em
-                <span class="gradient-text">clientes</span>
+               Soluções digitais para o seu 
+                <span class="gradient-text">negócio</span>
             </h1>
             <p class="text-xl text-gray-muted max-w-3xl mx-auto leading-relaxed">
-                Sites, landing pages e e-commerces com arquitetura técnica impecável. 
-                Performance, SEO e rastreamento desde o primeiro byte de código.
+                Desenvolvimento de sites, landing pages e lojas virtuais preparados para oferecer uma experiência rápida, segura e eficiente.
             </p>
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8 animate-on-scroll">
-            <a href="#planos" class="btn-primary px-8 py-3 rounded-xl font-semibold text-white text-center">Ver Planos</a>
-            <a href="#sobre" class="btn-outline px-8 py-3 rounded-xl font-medium text-white text-center">Conhecer História</a>
+            <a href="#planos" class="btn-primary px-8 py-3 rounded-xl font-semibold text-white text-center">Solicitar Orçamento</a>
+            <a href="#solucoes" class="btn-outline px-8 py-3 rounded-xl font-medium text-white text-center">Ver Soluções</a>
         </div>
     </div>
 </section>
 
-<!-- SOBRE (corrigido) -->
-<section id="sobre" class="py-24 px-6 bg-charcoal">
-    <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col lg:flex-row gap-12 items-start">
-            <div class="flex-shrink-0 text-center lg:text-left animate-on-scroll">
-                <img src="assets/img/flaviodev.jpg" alt="Flávio Lopes" class="profile-photo mx-auto lg:mx-0">
-                <h2 class="text-2xl font-bold mt-6">Flávio Lopes</h2>
-                <p class="text-accent text-sm" data-i18n="sobreTitulo">Desenvolvedor Web</p>
-            </div>
-            
-            <div class="flex-1">
-                <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="sobreTag">Minha Trajetória</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6"><span data-i18n="sobreTitle1">De arte finalista a</span> <span class="gradient-text" data-i18n="sobreTitle2">desenvolvedor web</span></h2>
-                
-                <div class="prose prose-invert max-w-none space-y-5">
-                    <div class="prose prose-invert max-w-none space-y-5">
-    <p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
-        Sou paranaense (pé vermeio) e comecei minha trajetória aos 16 anos em uma gráfica,
-        onde trabalhei por 8 anos como arte-finalista.
-    </p>
-
-```
-<p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
-    Foi ali que desenvolvi um <strong style="color:#ffffff;">olhar apurado para design, comunicação visual e experiência do usuário</strong>,
-    entendendo na prática como a apresentação de uma marca influencia confiança, percepção e vendas.
-</p>
-
-<p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
-    Hoje atuo com desenvolvimento de sites, WordPress, SEO, Google Ads, Meta Ads e automações.
-    Mais do que criar páginas bonitas, construo estruturas pensadas para gerar resultados.
-</p>
-
-<p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
-    Seu site precisa transmitir confiança nos primeiros segundos,
-    funcionar perfeitamente em qualquer dispositivo e transformar visitantes em clientes.
-</p>
-
-<p style="font-size: 20px; color: #ffffff; margin-top: 30px; font-weight: bold;">
-    É isso que entrego através de design inteligente, performance e estratégia.
-</p>
-```
-
-</div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="max-w-6xl mx-auto mt-20">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Arquitetura Digital <span class="gradient-text">que Entrega Resultados</span></h2>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
-                <div class="icon-wrapper">
-                    <i class="fab fa-wordpress text-2xl text-accent"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2">Criação e Otimização de Ativos Digitais (WordPress)</h3>
-                <p class="text-gray-muted text-sm leading-relaxed">Proficiência total na criação de ativos digitais dinâmicos e responsivos, com foco em usabilidade (UX/UI), utilizando a plataforma WordPress como base para projetos robustos e escaláveis.</p>
-            </div>
-            
-            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
-                <div class="icon-wrapper">
-                    <i class="fas fa-code text-2xl text-accent"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2">Refinamento de Código (HTML/CSS) e Design System</h3>
-                <p class="text-gray-muted text-sm leading-relaxed">Sólida habilidade em manipulação de codificação front-end para refinar o design e garantir a precisão do layout, além de manter um padrão de código limpo e otimizado para performance.</p>
-            </div>
-            
-            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
-                <div class="icon-wrapper">
-                    <i class="fas fa-globe text-2xl text-accent"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2">Configuração de Hospedagens e Domínios</h3>
-                <p class="text-gray-muted text-sm leading-relaxed">Experiência na configuração de hospedagens (HostGator, etc.) e domínios, garantindo que o ambiente seja o mais rápido e estável possível para suportar alto volume de acessos e melhorar o SEO.</p>
-            </div>
-            
-            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
-                <div class="icon-wrapper">
-                    <i class="fas fa-chart-line text-2xl text-accent"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2">Estratégias de SEO e Conteúdo</h3>
-                <p class="text-gray-muted text-sm leading-relaxed">Implementação de táticas avançadas de Otimização para Mecanismos de Busca (SEO), com foco na parte técnica (velocidade, estrutura e rastreamento), que é a base para o sucesso do conteúdo.</p>
-            </div>
-            
-            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
-                <div class="icon-wrapper">
-                    <i class="fas fa-chart-simple text-2xl text-accent"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2">Gestão de Campanhas em Google Ads e Facebook Ads</h3>
-                <p class="text-gray-muted text-sm leading-relaxed">Expertise na Gestão de Campanhas em Google Ads e Facebook Ads, focando em ROI e segmentação precisa para atingir metas de negócios.</p>
-            </div>
-            
-            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
-                <div class="icon-wrapper">
-                    <i class="fas fa-microchip text-2xl text-accent"></i>
-                </div>
-                <h3 class="text-lg font-bold mb-2">Ferramentas Essenciais e Automação (n8n, GTM, GitHub)</h3>
-                <p class="text-gray-muted text-sm leading-relaxed">Contato com n8n, GitHub, VSCode, ChatGPT e ElevenLabs para otimizar fluxos de trabalho e criar conteúdo inovador, além de apoio em design com Photoshop, CorelDRAW e Canva.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SOLUÇÕES com cards melhorados -->
+<!-- SOLUÇÕES -->
 <section id="solucoes" class="py-24 px-6 bg-charcoal">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
@@ -779,42 +699,16 @@
     </div>
 </section>
 
-<!-- CASES com cards melhorados -->
-<section id="cases" class="py-24 px-6 bg-dark">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="casesTag">Cases de Sucesso</span>
-            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">Projetos <span class="gradient-text" data-i18n="casesTitle">que entregam resultado</span></h2>
-            <p class="text-gray-muted text-lg max-w-2xl mx-auto" data-i18n="casesSub">Não é só código. É estratégia que vende.</p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
-                <div class="flex gap-1 mb-5"><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i></div>
-                <h3 class="text-xl font-bold mb-2" data-i18n="case1Titulo">+35% em Conversões</h3>
-                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case1Desc">E-commerce de moda com checkout otimizado e redução de abandono de carrinho.</p>
-            </div>
-            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
-                <div class="flex gap-1 mb-5"><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i></div>
-                <h3 class="text-xl font-bold mb-2" data-i18n="case2Titulo">+200% Visibilidade</h3>
-                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case2Desc">Site corporativo com SEO e rastreamento completo (GA4 + GTM).</p>
-            </div>
-            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
-                <div class="flex gap-1 mb-5"><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i><i class="fas fa-chart-line text-accent"></i></div>
-                <h3 class="text-xl font-bold mb-2" data-i18n="case3Titulo">8.3% Conversão</h3>
-                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case3Desc">Landing page com copy persuasiva e foco em WhatsApp. Resultado em 30 dias.</p>
-            </div>
-        </div>
-    </div>
-</section>
+
+
 
 <!-- PORTFÓLIO -->
 <section id="portfolio" class="py-24 px-6 bg-charcoal">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="portfolioTag">Portfólio</span>
-            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5" data-i18n="portfolioTitle">Projetos Reais</h2>
-            <p class="text-gray-muted text-lg max-w-2xl mx-auto" data-i18n="portfolioSub">Alguns projetos que realizei</p>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5" data-i18n="portfolioTitle">Alguns trabalhos desenvolvidos</h2>
+            <p class="text-gray-muted text-lg max-w-2xl mx-auto" data-i18n="portfolioSub">Sites, landing pages e projetos criados para diferentes tipos de negócio.</p>
         </div>
         
        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -913,6 +807,117 @@
     </div>
 </section>
 
+<!-- DIFERENCIAIS -->
+<section id="diferenciais" class="py-24 px-6 bg-dark">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="casesTag">Diferenciais</span>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">
+                Por que <span class="gradient-text" data-i18n="casesTitle">trabalhar comigo?</span>
+            </h2>
+            <p class="text-gray-muted text-lg max-w-2xl mx-auto" data-i18n="casesSub">
+                Desenvolvimento focado em qualidade, transparência e soluções que ajudam seu negócio a crescer.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            
+            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
+                <div class="flex gap-1 mb-5">
+                    <i class="fas fa-comments text-accent"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2" data-i18n="case1Titulo">
+                    Atendimento Direto
+                </h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case1Desc">
+                    Você fala diretamente com quem desenvolve o projeto, sem intermediários e com comunicação clara durante todo o processo.
+                </p>
+            </div>
+
+            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
+                <div class="flex gap-1 mb-5">
+                    <i class="fas fa-laptop-code text-accent"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2" data-i18n="case2Titulo">
+                    Projetos Personalizados
+                </h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case2Desc">
+                    Cada site é desenvolvido de acordo com as necessidades do seu negócio, sem soluções genéricas ou modelos engessados.
+                </p>
+            </div>
+
+            <div class="card p-7 rounded-2xl animate-on-scroll card-case min-h-[200px]">
+                <div class="flex gap-1 mb-5">
+                    <i class="fas fa-headset text-accent"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2" data-i18n="case3Titulo">
+                    Suporte e Acompanhamento
+                </h3>
+                <p class="text-gray-muted text-sm leading-relaxed" data-i18n="case3Desc">
+                    Auxílio durante o desenvolvimento e na publicação do site para que tudo funcione da melhor forma possível.
+                </p>
+            </div>
+
+        </div>
+    </div>
+	
+	
+	   <div class="max-w-6xl mx-auto mt-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Arquitetura Digital <span class="gradient-text">que Entrega Resultados</span></h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fab fa-wordpress text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Criação e Otimização de Ativos Digitais (WordPress)</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Proficiência total na criação de ativos digitais dinâmicos e responsivos, com foco em usabilidade (UX/UI), utilizando a plataforma WordPress como base para projetos robustos e escaláveis.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-code text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Refinamento de Código (HTML/CSS) e Design System</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Sólida habilidade em manipulação de codificação front-end para refinar o design e garantir a precisão do layout, além de manter um padrão de código limpo e otimizado para performance.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Configuração de Hospedagens e Domínios</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Experiência na configuração de hospedagens (HostGator, etc.) e domínios, garantindo que o ambiente seja o mais rápido e estável possível para suportar alto volume de acessos e melhorar o SEO.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-line text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Estratégias de SEO e Conteúdo</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Implementação de táticas avançadas de Otimização para Mecanismos de Busca (SEO), com foco na parte técnica (velocidade, estrutura e rastreamento), que é a base para o sucesso do conteúdo.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-simple text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Gestão de Campanhas em Google Ads e Facebook Ads</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Expertise na Gestão de Campanhas em Google Ads e Facebook Ads, focando em ROI e segmentação precisa para atingir metas de negócios.</p>
+            </div>
+            
+            <div class="expertise-card p-6 rounded-xl hover:border-accent/40 transition-all">
+                <div class="icon-wrapper">
+                    <i class="fas fa-microchip text-2xl text-accent"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Ferramentas Essenciais e Automação (n8n, GTM, GitHub)</h3>
+                <p class="text-gray-muted text-sm leading-relaxed">Contato com n8n, GitHub, VSCode, ChatGPT e ElevenLabs para otimizar fluxos de trabalho e criar conteúdo inovador, além de apoio em design com Photoshop, CorelDRAW e Canva.</p>
+            </div>
+        </div>
+    </div>
+	
+</section>
+
 <!-- Lightbox Modal com Link -->
 <div id="lightbox" class="lightbox-modal">
     <div class="lightbox-content">
@@ -931,7 +936,7 @@
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="depoimentosTag">Depoimentos</span>
-            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">O que dizem <span class="gradient-text" data-i18n="depoimentosTitle">meus clientes</span></h2>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-5">O que dizem <span class="gradient-text" data-i18n="depoimentosTitle">por aí</span></h2>
         </div>
         
         <div class="grid md:grid-cols-3 gap-6">
@@ -962,6 +967,61 @@
         </div>
     </div>
 </section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-24 px-6 bg-charcoal">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            <div class="flex-shrink-0 text-center lg:text-left animate-on-scroll">
+                <img src="assets/img/flaviodev.jpg" alt="Flávio Lopes  " class="profile-photo mx-auto lg:mx-0">
+                <h2 class="text-2xl font-bold mt-6">Flávio Lopes  </h2>
+                <p class="text-accent text-sm" data-i18n="sobreTitulo">Desenvolvedor Web</p>
+            </div>
+            
+            <div class="flex-1">
+                <span class="text-accent text-sm font-medium uppercase tracking-wider" data-i18n="sobreTag">Minha Trajetória</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6"><span data-i18n="sobreTitle1">De arte finalista a</span> <span class="gradient-text" data-i18n="sobreTitle2">desenvolvedor web</span></h2>
+                
+                <div class="prose prose-invert max-w-none space-y-5">
+                    <div class="prose prose-invert max-w-none space-y-5">
+    <p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
+        Sou paranaense (pé vermeio) e comecei minha trajetória aos 16 anos em uma gráfica,
+        onde trabalhei por 8 anos como arte-finalista.
+    </p>
+
+```
+<p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
+    Foi ali que desenvolvi um <strong style="color:#ffffff;">olhar apurado para design, comunicação visual e experiência do usuário</strong>,
+    entendendo na prática como a apresentação de uma marca influencia confiança, percepção e vendas.
+</p>
+
+<p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
+    Hoje atuo com desenvolvimento de sites, WordPress, SEO, Google Ads, Meta Ads e automações.
+    Mais do que criar páginas bonitas, construo estruturas pensadas para gerar resultados.
+</p>
+
+<p style="font-size: 18px; color: #d1d5db; line-height: 1.6;">
+    Seu site precisa transmitir confiança nos primeiros segundos,
+    funcionar perfeitamente em qualquer dispositivo e transformar visitantes em clientes.
+</p>
+
+<p style="font-size: 20px; color: #ffffff; margin-top: 30px; font-weight: bold;">
+    É isso que entrego através de design inteligente, performance e estratégia.
+</p>
+```
+
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+</section>
+
+
+
 
 <!-- CARROSSEL DE SERVIÇOS -->
 <section class="py-12 px-6 bg-charcoal border-t border-b border-accent/10">
@@ -1004,7 +1064,8 @@
         
         <div class="grid md:grid-cols-4 gap-8">
 		
-			<div class="card p-8 rounded-2xl animate-on-scroll">
+			  <div class="card-highlight p-8 rounded-2xl relative animate-on-scroll">
+			<div class="absolute -top-3 left-1/2 -translate-x-1/2"><span class="bg-accent text-white px-4 py-1 rounded-full text-xs font-bold" data-i18n="plano2Badge">Mais escolhido</span></div>
                 <h3 class="text-2xl font-bold mb-2" data-i18n="plano1Titulo">Comece Grátis</h3>
                 <p class="text-gray-muted text-sm mb-6" data-i18n="plano1Desc">Comece sua presença online sem custo</p>
                 <div class="text-4xl font-bold mb-6">R$ 0<span class="text-gray-muted text-base font-normal"> </span></div>
@@ -1014,7 +1075,7 @@
                     <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano1Item3">WhatsApp integrado</span></li>
 					<li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano1Item3">Sem Mensalidade</span></li>
                 </ul>
-                <a href="https://wa.me/5543996432679?text=Olá!%20Vi%20o%20Plano%20Gratuito%20no%20site%20e%20gostaria%20de%20começar." target="_blank" class="btn-outline block w-full py-3 text-center rounded-xl font-medium" data-i18n="plano1Btn">Solicitar</a>
+                <a href="https://wa.me/5543996432679?text=Olá!%20Vi%20o%20Plano%20Gratuito%20no%20site%20e%20gostaria%20de%20começar." target="_blank" class="btn-primary block w-full py-3 text-center rounded-xl font-semibold" data-i18n="plano1Btn">Solicitar</a>
             </div>
 
             <div class="card p-8 rounded-2xl animate-on-scroll">
@@ -1032,8 +1093,8 @@
                 <a href="https://wa.me/5543996432679?text=Olá!%20Tenho%20interesse%20no%20Plano%20Essencial%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-outline block w-full py-3 text-center rounded-xl font-medium" data-i18n="plano1Btn">Solicitar</a>
             </div>
             
-            <div class="card-highlight p-8 rounded-2xl relative animate-on-scroll">
-                <div class="absolute -top-3 left-1/2 -translate-x-1/2"><span class="bg-accent text-white px-4 py-1 rounded-full text-xs font-bold" data-i18n="plano2Badge">Mais escolhido</span></div>
+            <div class="card p-8 rounded-2xl animate-on-scroll">
+                
                 <h3 class="text-2xl font-bold mb-2" data-i18n="plano2Titulo">Estratégico</h3>
                 <p class="text-gray-muted text-sm mb-6" data-i18n="plano2Desc">Copy persuasiva e rastreamento</p>
                 <div class="text-4xl font-bold mb-6">R$ 800<span class="text-gray-muted text-base font-normal"> - 1.200</span></div>
@@ -1043,7 +1104,7 @@
                     <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano2Item3">GA4 + Meta Pixel instalados</span></li>
                     <li class="flex items-start gap-3"><i class="fas fa-check text-accent text-sm mt-1"></i><span class="text-gray-muted text-sm" data-i18n="plano2Item4">Otimização de velocidade</span></li>
                 </ul>
-                <a href="https://wa.me/5543996432679?text=Olá!%20Tenho%20interesse%20no%20Plano%20Estratégico%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-primary block w-full py-3 text-center rounded-xl font-semibold" data-i18n="plano2Btn">Quero Vender Mais</a>
+                <a href="https://wa.me/5543996432679?text=Olá!%20Tenho%20interesse%20no%20Plano%20Estratégico%20e%20gostaria%20de%20mais%20informações." target="_blank" class="btn-outline block w-full py-3 text-center rounded-xl font-medium" data-i18n="plano2Btn">Quero Vender Mais</a>
             </div>
             
             <div class="card p-8 rounded-2xl animate-on-scroll">
@@ -1082,19 +1143,23 @@
 <footer class="py-12 px-6 border-t border-gray-light/20 bg-dark">
     <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-4 gap-8 mb-8 footer-grid">
-            <div>
-                <div class="flex items-center gap-2 mb-4">
-                    <i class="fas fa-code text-accent text-xl"></i>
-                    <span class="text-lg font-semibold"><span class="logo-text">Flávio</span><span class="logo-accent">Dev</span></span>
-                </div>
-                <p class="text-gray-muted text-sm" data-i18n="footerDesc">Desenvolvedor Web focado em criar soluções modernas, funcionais e estratégicas que atendem pequenas e médias empresas.</p>
-            </div>
+            <div class="logo">
+    <div class="logo-wrapper">
+        <i class="fas fa-code logo-icon"></i>
+
+        <span class="logo-text">
+            Flávio<span class="logo-accent">Lopes</span>
+        </span>
+    </div>
+
+    <span class="logo-sub">Web Developer</span>
+</div>
             <div>
                 <h4 class="text-white font-semibold mb-4" data-i18n="footerLinksTitle">Links Rápidos</h4>
                 <ul class="space-y-2 text-sm">
                     <li><a href="#sobre" class="text-gray-muted hover:text-accent transition" data-i18n="footerSobre">Sobre</a></li>
                     <li><a href="#solucoes" class="text-gray-muted hover:text-accent transition" data-i18n="footerSolucoes">Soluções</a></li>
-                    <li><a href="#cases" class="text-gray-muted hover:text-accent transition" data-i18n="footerSolucoes">Cases</a></li>
+                    <li><a href="#diferenciais" class="text-gray-muted hover:text-accent transition" data-i18n="footerSolucoes">Como eu trabalho</a></li>
                     <li><a href="#portfolio" class="text-gray-muted hover:text-accent transition" data-i18n="footerPortfolio">Portfólio</a></li>
                     <li><a href="#planos" class="text-gray-muted hover:text-accent transition" data-i18n="footerPlanos">Planos</a></li>
                 </ul>
@@ -1106,7 +1171,7 @@
                     <li class="text-gray-muted"><i class="far fa-envelope text-accent mr-2"></i> flanegociosonline@gmail.com</li>
                 </ul>
                 <div class="flex gap-5 mt-5">
-                    <a href="https://www.linkedin.com/in/flaviolopess/" class="text-gray-muted footer-social-icon text-xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/flavio s/" class="text-gray-muted footer-social-icon text-xl"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/fla1331" class="text-gray-muted footer-social-icon text-xl"><i class="fab fa-github"></i></a>
                 </div>
             </div>
@@ -1129,7 +1194,7 @@
             </div>
         </div>
         <div class="text-center pt-8 border-t border-gray-light/20">
-            <p class="text-gray-muted text-sm" data-i18n="footerCopyright">&copy; 2026 Flávio Lopes - Desenvolvedor Web. Todos os direitos reservados.</p>
+            <p class="text-gray-muted text-sm" data-i18n="footerCopyright">&copy; 2026 Flávio   - Desenvolvedor Web. Todos os direitos reservados.</p>
         </div>
     </div>
 </footer>
@@ -1166,7 +1231,7 @@
             solucao3Desc: "Páginas de alta conversão com copy persuasiva e foco em um único objetivo.",
             solucao4Titulo: "WordPress",
             solucao4Desc: "Otimização e desenvolvimento de sites WP com foco em performance e segurança.",
-            casesTag: "Cases de Sucesso",
+            casesTag: "Como eu Trabalho",
             casesTitle: "que entregam resultado",
             casesSub: "Não é só código. É estratégia que vende.",
             case1Titulo: "+35% em Conversões",
@@ -1225,7 +1290,7 @@
             footerPerformance1: "PageSpeed Insights 90+",
             footerPerformance2: "SSL Seguro",
             footerPerformance3: "100% Responsivo",
-            footerCopyright: "© 2026 Flávio Lopes - Desenvolvedor Web. Todos os direitos reservados.",
+            footerCopyright: "© 2026 Flávio   - Desenvolvedor Web. Todos os direitos reservados.",
             portfolioTag: "Portfólio",
             portfolioTitle: "Projetos Reais",
             portfolioSub: "Alguns dos projetos reais que entregam resultado.",
@@ -1306,7 +1371,7 @@
             footerPerformance1: "PageSpeed Insights 90+",
             footerPerformance2: "Secure SSL",
             footerPerformance3: "100% Responsive",
-            footerCopyright: "© 2026 Flávio Lopes - Web Developer. All rights reserved.",
+            footerCopyright: "© 2026 Flávio   - Web Developer. All rights reserved.",
             portfolioTag: "Portfolio",
             portfolioTitle: "Real Projects",
             portfolioSub: "Some of the real projects that deliver results.",
@@ -1387,7 +1452,7 @@
             footerPerformance1: "PageSpeed Insights 90+",
             footerPerformance2: "SSL Seguro",
             footerPerformance3: "100% Responsivo",
-            footerCopyright: "© 2026 Flávio Lopes - Desarrollador Web. Todos los derechos reservados.",
+            footerCopyright: "© 2026 Flávio   - Desarrollador Web. Todos los derechos reservados.",
             portfolioTag: "Portafolio",
             portfolioTitle: "Proyectos Reales",
             portfolioSub: "Algunos de los proyectos reales que entregan resultados.",
