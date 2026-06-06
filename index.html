@@ -173,6 +173,7 @@
         /* Logo com efeito CSS3 suave */
         .logo-text {
             font-weight: 700;
+			font-style: italic;
             letter-spacing: -0.02em;
             background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F7 100%);
             -webkit-background-clip: text;
@@ -180,11 +181,13 @@
             color: transparent;
             transition: all 0.3s ease;
             text-shadow: 0 0 20px rgba(255,107,53,0.2);
+			font-size:1.3em;
+			font-family: system-ui;
         }
         
         .logo-text:hover {
             text-shadow: 0 0 25px rgba(255,107,53,0.4);
-            letter-spacing: -0.01em;
+            
         }
         
         .logo-accent {
@@ -577,7 +580,7 @@
         <div class="flex items-center gap-2">
             <i class="fas fa-code text-accent text-2xl"></i>
             <span class="text-xl  tracking-tight">
-                <span class="logo-text">Flávio</span><span class="logo-accent"> Lopes </span>
+                <span class="logo-text">Flávio </span><span class="logo-accent"> </span>
             </span><br>
 			<i><span style="font-size:11px;">Desenvolvedor Web</span></i>
         </div>
@@ -1146,10 +1149,10 @@
         <div class="grid md:grid-cols-4 gap-8 mb-8 footer-grid">
             <div class="logo">
     <div class="logo-wrapper">
-        <i class="fas fa-code logo-icon"></i>
+        <i class="fas fa-code text-accent text-2xl"></i>
 
         <span class="logo-text">
-            Flávio<span class="logo-accent">Lopes</span>
+            Flávio<span class="logo-accent"></span>
         </span>
     </div>
 
